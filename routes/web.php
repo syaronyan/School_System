@@ -17,3 +17,4 @@
 
 Route::get('/', 'StundentController@index');
 Route::get('/signup', 'StundentController@signup');
+Route::get('/signin', 'StundentController@signin');
