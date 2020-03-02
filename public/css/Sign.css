@@ -11,32 +11,24 @@
    .login {
     padding: 60px 60px;
     background-color: rgba(246, 255, 125, 0.315);
-    /* position: relative;
-    height: 560px;
-    width: 405px;
-    margin: auto;
-    padding: 60px 60px;
-    background: url(https://picsum.photos/id/1004/5616/3744) no-repeat   center center #505050;    
-    background-size: cover;
-    box-shadow: 0px 30px 60px -5px #000; */
   } 
   
   form {
-      background-color: #fff;
+    background-color: #fff;
     max-width: 500px;
-    height: 550px;
+    height: 480px;
     padding-top: 20px;
     margin: auto;
-    /* border: 5px solid rgb(112, 107, 107); */
+  }
+
+  #signup {
+    background-color: #fff;
+    max-width: 500px;
+    height: 650px;
+    padding-top: 20px;
+    margin: auto;
   }
   
-  /* .active {
-    border-bottom: 2px solid #1161ed;
-  }
-  
-  .nonactive {
-    color: rgba(255, 255, 255, 0.2);
-  } */
   
   h2 {
     padding-left: 12px;
@@ -85,17 +77,18 @@
   .text:focus + span {
     opacity: 0.6;
   }
-  
+
+  input[type="text"],
   input[type="email"],
   input[type="password"] {
     font-family: 'Montserrat', sans-serif;
     color: #000;
     padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
   }
-  
-  
   
   input {
     display: inline-block;
@@ -173,13 +166,5 @@
     top: 85px;
     position: relative;
   }
-/*   
-  a {
-    text-align: center;
-    display: block;
-    top: 120px;
-    position: relative;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.2);
-  } */
+
   
