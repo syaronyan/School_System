@@ -16,7 +16,7 @@
   form {
     background-color: #fff;
     max-width: 500px;
-    height: 480px;
+    height: 500px;
     padding-top: 20px;
     margin: auto;
   }
@@ -24,7 +24,7 @@
   #signup {
     background-color: #fff;
     max-width: 500px;
-    height: 650px;
+    height: 700px;
     padding-top: 20px;
     margin: auto;
   }
@@ -164,4 +164,11 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     top: 85px;
     position: relative;
+  }
+
+  .error_msg {
+    color: red;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
   }

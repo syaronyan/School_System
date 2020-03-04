@@ -20,4 +20,9 @@ class StundentController extends Controller
     {
         return view('signup');
     }
+
+    public function work()
+    {
+        return view('work');
+    }
 }

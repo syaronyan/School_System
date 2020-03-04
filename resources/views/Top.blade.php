@@ -3,11 +3,11 @@
 <div class='section'>講座一覧</div>
 
     <div class="contents">
-            <div class='card'>
+            <a href="/work/1" class='card'>
                 <div class='card-body'>
-                    HTML
+                    HTML/CSS
                 </div>
-            </div>
+            </a>
             <div class='card'>
                 <div class='card-body'>
                     CSS
