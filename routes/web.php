@@ -25,3 +25,4 @@ Route::get('/work/{id}', 'GroupController@subject');
 //Route::get('/work/{id}', 'TasksController@task');
 Route::post('/1', 'StudentsController@signup');
 Route::post('/2', 'StudentsController@signin');
+Route::get('/work/{id}/{page}', 'PageController@aa');

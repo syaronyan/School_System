@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.ul-align-center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+.sm_work {
+    text-align: left;
+}
+
+.comment {
+    text-align: left;
+}

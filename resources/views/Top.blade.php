@@ -8,31 +8,31 @@
                     HTML/CSS
                 </div>
             </a>
-            <div href="/work/2" class='card'>
+            <a href="/work/2" class='card'>
                 <div class='card-body'>
                     PHP
                 </div>
-            </div>
-            <div href="/work/3" class='card'>
+            </a>
+            <a href="/work/3" class='card'>
                 <div class='card-body'>
                     JavaScript
                 </div>
-            </div>
-            <div href="/work/4" class='card'>
+            </a>
+            <a href="/work/4" class='card'>
                 <div class='card-body'>
-                    PHP
+                    SQL
                 </div>
-            </div>
-            <div class='card'>
+            </a>
+            <a href="/work/5" class='card'>
                 <div class='card-body'>
-                    PHP
+                    セキュリティ
                 </div>
-            </div>
-            <div class='card'>
+            </a>
+            <a href="/work/6" class='card'>
                 <div class='card-body'>
-                    PHP
+                    デザイン
                 </div>
-            </div>
+            </a>
     </div>
 </div>
 @endsection('content')
