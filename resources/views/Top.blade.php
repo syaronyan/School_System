@@ -8,14 +8,24 @@
                     HTML/CSS
                 </div>
             </a>
-            <div class='card'>
+            <div href="/work/2" class='card'>
                 <div class='card-body'>
-                    CSS
+                    PHP
+                </div>
+            </div>
+            <div href="/work/3" class='card'>
+                <div class='card-body'>
+                    JavaScript
+                </div>
+            </div>
+            <div href="/work/4" class='card'>
+                <div class='card-body'>
+                    PHP
                 </div>
             </div>
             <div class='card'>
                 <div class='card-body'>
-                    JavaScript
+                    PHP
                 </div>
             </div>
             <div class='card'>

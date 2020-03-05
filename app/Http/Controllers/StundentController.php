@@ -8,6 +8,11 @@ class StundentController extends Controller
 {
     public function index()
     {
+        return view('mypage');
+    }
+
+    public function Top()
+    {
         return view('Top');
     }
 

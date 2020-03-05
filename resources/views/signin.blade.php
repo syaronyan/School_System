@@ -25,5 +25,4 @@
         </form>
         <a href="/signup">初めての方はこちらから</a>
     </div>
-
 @endsection
