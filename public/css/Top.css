@@ -76,6 +76,14 @@ nav ul{
     margin: 15px;
     border: 4px solid #a8a8a8;
     background-color: #fff;
+    text-decoration: none;
+    color: #000;
+}
+
+.card:hover {
+    background-color: #00acaf;
+    text-decoration: none;
+    color: #000;
 }
 
 .card-body {

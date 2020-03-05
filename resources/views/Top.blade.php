@@ -3,19 +3,29 @@
 <div class='section'>講座一覧</div>
 
     <div class="contents">
-            <div class='card'>
+            <a href="/work/1" class='card'>
                 <div class='card-body'>
-                    HTML
+                    HTML/CSS
+                </div>
+            </a>
+            <div href="/work/2" class='card'>
+                <div class='card-body'>
+                    PHP
                 </div>
             </div>
-            <div class='card'>
-                <div class='card-body'>
-                    CSS
-                </div>
-            </div>
-            <div class='card'>
+            <div href="/work/3" class='card'>
                 <div class='card-body'>
                     JavaScript
+                </div>
+            </div>
+            <div href="/work/4" class='card'>
+                <div class='card-body'>
+                    PHP
+                </div>
+            </div>
+            <div class='card'>
+                <div class='card-body'>
+                    PHP
                 </div>
             </div>
             <div class='card'>
