@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="login">
-        <form method='post' action='/2'>
+        <form method='post' action='/signin'>
             <span>ログイン</span>
             @if ($errors->has('email'))
                 <p class="error_msg">{{ $errors->first('email') }}</p>

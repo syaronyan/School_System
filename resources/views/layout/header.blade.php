@@ -17,9 +17,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="/">マイページ</a></li>
+                    <li class="current"><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
-                    <li><a href="/">設定</a></li>
+                    <li><a href="#">設定</a></li>
                     <!-- <li><a href="/">質問</a></li>
                     <li><a href="/">Blog</a></li> -->
                 </ul>

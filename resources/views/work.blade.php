@@ -11,7 +11,7 @@
             <input type='checkbox'>
             </td>
             <td style="text-align: left">
-                {{ $task->name }}
+                <a href='{{ $group->id }}/{{ $task->link}}'>{{ $task->name }}</a>
             </td>
         </tr>
         @endforeach

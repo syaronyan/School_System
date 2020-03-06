@@ -1,15 +1,48 @@
 @charset "utf-8";
 
+.background_wrapper {
+    background-color:  rgba(246, 255, 125, 0.315);
+}
+
+.sm_section {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
 .ul-align-center{
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  
+
+.lg_works {
+    background-color: #fff;
+    margin-top: 32px;
+    border-radius: 24px;
+}
+
+.lg_work {
+    background-color: #fff;
+    margin-top: 32px;
+    margin-bottom: 120px;
+    border-radius: 24px;
+}  
+
+.work_block {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
 .sm_work {
     text-align: left;
+    line-height: 48px;
+    font-weight: 600;    
 }
 
 .comment {
     text-align: left;
+    line-height: 24px;
+    font-weight: 100;
 }

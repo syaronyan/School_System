@@ -16,13 +16,14 @@
 // });
 
 Route::get('/', 'StundentController@index');
+Route::get('/mypage', 'StundentController@mypage');
 Route::get('/Top', 'StundentController@Top');
 Route::get('/signup', 'StundentController@signup');
-Route::get('/signin', 'StundentController@signin');
+// Route::get('/signin', 'StundentController@signin');
 // Route::get('/work/{id}', 'StundentController@work');
 
 Route::get('/work/{id}', 'GroupController@subject');
 //Route::get('/work/{id}', 'TasksController@task');
 Route::post('/1', 'StudentsController@signup');
-Route::post('/2', 'StudentsController@signin');
+Route::post('/signin', 'StudentsController@signin');
 Route::get('/work/{id}/{page}', 'PageController@aa');
