@@ -64,7 +64,7 @@ class StudentsController extends Controller
             //if fails
     
             if($pass == $auth['password']){
-                return view('Top');
+                return view('mypage');
             }else{
                 $error = 'パスワードが正しくありません';
                 return view('signin', compact('error'));
