@@ -20,16 +20,16 @@
                     <li class="current"><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="#">設定</a></li>
-                    <!-- <li><a href="/">質問</a></li>
-                    <li><a href="/">Blog</a></li> -->
+                    <li><a href="#">質問</a></li>
+                    <li><a href="#">スケジュール</a></li>
                 </ul>
             </nav>
         </div>
         <div class='contents'>
             @yield('content')
         </div>
-            <footer class="footer">
-                <p>フッター（共通部分）</p>
+            <footer id="footer">
+                <p>2020 Tech I.S. All rights reversed</p>
             </footer>
     </body>
 </html>
