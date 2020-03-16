@@ -7,17 +7,24 @@ use App\Http\Controllers\TasksController;
 use Illuminate\Http\Request;
 use App\Group;
 use App\Tasks;
+use App\Progress;
 
 class GroupController extends Controller
 {
-    public function subject ($id) 
+    public function subject (Request $request, $id) 
     {
+        $user = $request->session()->get('user');
+
         $group = Group::where('id', '=', $id)->first();
 
-        // $taskscontroller = new App\Http\Controllers\TasksController;
-        // $taskscontroller -> task($id);
-        // $tasks = array('a'=>'aaa','b'=>'bbb');
-        $tasks = Tasks::where('group_id', '=', $id)->get();
+        $tasks = Tasks::leftJoin('Progress', function ($join) use ($user){
+            $join->on('tasks.id', '=', 'progress.tasks_id')
+                 ->where('student_id', '=', $user);
+        })
+        ->select('student_id', 'group_id', 'tasks.id as tasks_id', 'link', 'check_flag', 'tasks.name as tasks_name')
+        ->where('group_id', '=', $id)
+        ->get();
+
         return view('work', compact('group','tasks'));
     }
 }

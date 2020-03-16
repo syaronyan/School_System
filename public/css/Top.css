@@ -18,6 +18,20 @@
     margin: 0px;
 }
 
+#footer {
+    background-color: #00acaf;
+}
+
+#footer p {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: arial;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
 nav ul{
     display: table;
     margin: 0 auto;
