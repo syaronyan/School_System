@@ -17,6 +17,7 @@ class CreateGroupTable extends Migration
             $table->increments('id');
             $table->string("name");
             $table->string("tools");
+            $table->string("img_link");
             $table->timestamps();
             $table->integer('status');
         });

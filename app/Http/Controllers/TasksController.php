@@ -9,9 +9,5 @@ use App\Tasks;
 
 class TasksController extends Controller
 {
-    public function task ($id) 
-    {
-        $tasks = Tasks::where('group_id', '=', $id)->first();
-        return view('work', compact('tasks'));
-    }
+    //
 }

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/Top.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
         <link rel="stylesheet" href="{{ asset('css/Sign.css') }}">
         <link rel="stylesheet" href="{{ asset('css/TaskPage.css') }}">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -19,7 +20,7 @@
                 <ul>
                     <li class="current"><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
-                    <li><a href="#">設定</a></li>
+                    <li><a href="/option">設定</a></li>
                     <li><a href="#">質問</a></li>
                     <li><a href="#">スケジュール</a></li>
                 </ul>

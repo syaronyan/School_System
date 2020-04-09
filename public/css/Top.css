@@ -19,6 +19,7 @@
 }
 
 #footer {
+    clear: both;
     background-color: #00acaf;
 }
 

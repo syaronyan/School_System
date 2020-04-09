@@ -17,6 +17,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->integer('group_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('group');
+            $table->string("link");
             $table->string("name");
             $table->timestamps();
             $table->integer('status');

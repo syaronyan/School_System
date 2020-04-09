@@ -3,12 +3,15 @@
 <div class='section'>講座一覧</div>
 
     <div class="contents">
-            <a href="/work/1" class='card'>
+            @foreach( $groups as $group )
+            <a href="/work/{{ $group->id }}" class='card'>
+                <img src="{{ asset('storage/') }}/{{ $group->img_link }}" width="200" height="200">
                 <div class='card-body'>
-                    HTML/CSS
+                    {{ $group->tools }}
                 </div>
             </a>
-            <a href="/work/2" class='card'>
+            @endforeach
+            <!-- <a href="/work/2" class='card'>
                 <div class='card-body'>
                     PHP
                 </div>
@@ -32,7 +35,7 @@
                 <div class='card-body'>
                     デザイン
                 </div>
-            </a>
+            </a> -->
     </div>
 </div>
 @endsection('content')

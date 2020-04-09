@@ -16,8 +16,9 @@ class CreateProgressTable extends Migration
         Schema::create('progress', function (Blueprint $table) {
             $table->integer('student_id')->unsigned();
             $table->foreign('student_id')->references('id')->on('students');
-            $table->integer('group_id')->unsigned();
-            $table->foreign('group_id')->references('id')->on('group');
+            $table->integer('tasks_id')->unsigned();
+            $table->foreign('tasks_id')->references('id')->on('tasks');
+            $table->integer("check_flag");
             $table->timestamps();
         });
     }

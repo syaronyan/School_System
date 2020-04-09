@@ -17,6 +17,9 @@
             <td style="text-align: left">
                 <a href='{{ $group->id }}/{{ $task->link }}'>{{ $task->tasks_name }}</a>
             </td>
+            <td>
+                <img src="{{ asset('storage/') }}/{{ $task->r_o_link }}" width="40" height="20">
+            </td>
         </tr>
         @endforeach
     </table>
