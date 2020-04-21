@@ -12,7 +12,9 @@
                     余裕があればbootstrapで装飾してみましょう！
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-2-1.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-2-1.png">
+                </div>
             </ul>
         </div> 
     </div>

@@ -14,8 +14,10 @@
                     <li class='sm_work'>
                     下記画面のように、CSVダウンロードボタンを設置し、ボタンを押すことで会員一覧をCSVでダウンロードできるように実装しましょう。
                     </li>
-                </div><img src="{{ asset('storage/') }}/2-4-1.png">
-
+                </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-4-1.png">
+                </div>
             </ul>
         </div> 
     </div>

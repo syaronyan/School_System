@@ -12,7 +12,9 @@
                     会員登録の際はPOSTの値を利用しているため、POSTの値をエンコード処理し、セキュリティを高めていきましょう。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-7.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-7.png">
+                </div>
             </ul>
         </div> 
     </div>

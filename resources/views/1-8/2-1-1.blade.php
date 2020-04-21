@@ -21,6 +21,7 @@
             </ul>
         </div> 
     </div>
+    <div class='background_wrapper'>
     <div class='section'>入力画面制作（難易度：★★☆☆☆）</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
@@ -37,9 +38,12 @@
                         </ul>
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-1.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-1.png">
+                </div>
             </ul>
         </div> 
+    </div>
     </div>
 </div>
 @endsection('content')

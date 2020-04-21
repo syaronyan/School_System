@@ -21,7 +21,9 @@
                     PHPでログイン機能を実装する場合は、セッション関数を利用し、$_SESSIONというグローバル変数に値を入れ、その値を有無でログイン状態を把握することが多いです。今回は入力されたデータをMySQLから検索し、データがあれば$_SESSION['ID']に会員番号を格納するように実装してみましょう。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-3-1.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-3-1.png">
+                </div>
             </ul>
         </div> 
     </div>

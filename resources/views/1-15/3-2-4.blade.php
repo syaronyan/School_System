@@ -9,7 +9,9 @@
                     画面設計をもとに<a href='https://drive.google.com/open?id=1Y6Qe42MG9ibqW78WsZN74kP3SpBvp2tx'>DB設計</a>を行う
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/3-2-4.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/3-2-4.png">
+                </div>
             </ul>
         </div> 
     </div>

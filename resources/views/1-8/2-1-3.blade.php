@@ -12,7 +12,9 @@
                     確認画面の登録ボタンをクリックしたときに入力したデータを登録してください。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-3.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-3.png">
+                </div>
             </ul>
         </div> 
     </div>

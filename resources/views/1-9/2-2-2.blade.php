@@ -16,8 +16,10 @@
                             </li>
                         </ul>
                     </li>
-                </div><img src="{{ asset('storage/') }}/2-2-2.png">
-
+                </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-2-2.png">
+                </div>
             </ul>
         </div> 
     </div>

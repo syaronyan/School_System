@@ -9,7 +9,9 @@
                     会員登録フォームに画像を添付できる機能を追加してください。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-8.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-8.png">
+                </div>
             </ul>
         </div> 
     </div>

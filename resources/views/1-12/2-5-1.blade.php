@@ -12,6 +12,7 @@
             </ul>
         </div> 
     </div>
+    <div class='background_wrapper'>
     <div class='section'>ページ制作（難易度：★★☆☆☆）</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
@@ -23,6 +24,7 @@
 
             </ul>
         </div> 
+    </div>
     </div>
 </div>
 @endsection('content')

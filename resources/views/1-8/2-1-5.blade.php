@@ -15,7 +15,9 @@
                     エラーでない場合は、先に進めるようにしてください。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-5.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-5.png">
+                </div>
             </ul>
         </div> 
     </div>

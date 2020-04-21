@@ -12,7 +12,9 @@
                     前課題で製作した入力画面の登録ボタンをクリックすることで、先ほど入力した情報を確認できるようにデータ連携してください。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-2.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-2.png">
+                </div>
             </ul>
         </div> 
     </div>

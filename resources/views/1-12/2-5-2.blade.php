@@ -12,8 +12,12 @@
                     画数の集計をする際は、下記に記載の画数データベースを利用して実装しましょう。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-5-2_01.png">
-                <img src="{{ asset('storage/') }}/2-5-2_02.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-5-2_01.png">
+                </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-5-2_02.png">
+                </div>
             </ul>
         </div> 
     </div>

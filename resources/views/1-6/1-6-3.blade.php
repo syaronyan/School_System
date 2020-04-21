@@ -9,6 +9,18 @@
                         下記のチラシ作成に関する課題を実施してください。
                     </li>
                 </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/1-6-3_01.png">
+                </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/1-6-3_02.png">
+                </div>
+                <div class='explain'>
+                    <b>制作見本と制作における重要ポイント</b>
+                </div>
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/1-6-3_03.jpg">
+                </div>
             </ul>
         </div> 
     </div>

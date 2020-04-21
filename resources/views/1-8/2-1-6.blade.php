@@ -12,7 +12,9 @@
                     生まれ年のプルダウンを関数を使ってPHP化してください。
                     </li>
                 </div>
-                <img src="{{ asset('storage/') }}/2-1-6.png">
+                <div class='explain'>
+                    <img src="{{ asset('storage/') }}/2-1-6.png">
+                </div>
             </ul>
         </div> 
     </div>
