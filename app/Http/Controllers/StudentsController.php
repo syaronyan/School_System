@@ -127,6 +127,9 @@ class StudentsController extends Controller
             ->where('id', '=', $user)
             ->first();
 
+            // var_dump($progress_tasks_edit);
+            // exit;
+
             //進捗管理と生徒の情報を持ってmypageに遷移
             return view('mypage', compact('progress_tasks_edit', 'student'));
         // return view('mypage');

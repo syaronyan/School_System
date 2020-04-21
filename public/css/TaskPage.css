@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 .background_wrapper {
-    background-color:  rgba(246, 255, 125, 0.315);
+    /* background-color:  rgba(246, 255, 125, 0.315); */
+    background-color: #def0f1;
 }
 
 .sm_section {
@@ -21,7 +22,7 @@
     background-color: #fff;
     margin-top: 32px;
     border-radius: 24px;
-    width: 600px;
+    width: 1200px;
 }
 
 .lg_work {
@@ -29,7 +30,7 @@
     margin-top: 32px;
     margin-bottom: 120px;
     border-radius: 24px;
-    width: 600px;
+    width: 1200px;
 }  
 
 .work_block {

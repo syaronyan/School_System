@@ -10,7 +10,8 @@
   
    .login {
     padding: 60px 60px;
-    background-color: rgba(246, 255, 125, 0.315);
+    /* background-color: rgba(246, 255, 125, 0.315); */
+    background-color: #def0f1;
   } 
   
   form {

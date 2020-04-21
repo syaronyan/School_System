@@ -21,8 +21,8 @@
                     <li class="current"><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="/option">設定</a></li>
-                    <li><a href="#">質問</a></li>
-                    <li><a href="#">スケジュール</a></li>
+                    <!-- <li><a href="#"></a></li>
+                    <li><a href="#"></a></li> -->
                 </ul>
             </nav>
         </div>
@@ -31,6 +31,7 @@
         </div>
             <footer id="footer">
                 <p>2020 Tech I.S. All rights reversed</p>
+                <a href=''>プライバシーポリシー</a>
             </footer>
     </body>
 </html>

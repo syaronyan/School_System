@@ -1,0 +1,20 @@
+@extends('layout.header')
+@section('content')
+<div class='background_wrapper'>
+    <div class='section'>カレンダーづくり（難易度：★★★☆☆）</div>
+        <div class='ul-align-center'>
+            <ul class='lg_work'>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    下記の画面イメージのとおりに今月のカレンダーを作成してみましょう。
+                    </li>
+                    <li class='sm_work'>
+                    余裕があればbootstrapで装飾してみましょう！
+                    </li>
+                </div>
+                <img src="{{ asset('storage/') }}/2-2-1.png">
+            </ul>
+        </div> 
+    </div>
+</div>
+@endsection('content')

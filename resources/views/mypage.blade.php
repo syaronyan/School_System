@@ -30,7 +30,7 @@
         </div>
     </div> -->
     <div class='progress_wrap'>
-        @for($i=0; $i < 6; $i++)
+        @for($i=0; $i < 17; $i++)
             <div class='progress_img'>
                 <div>
                     <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
