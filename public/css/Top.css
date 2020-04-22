@@ -33,6 +33,11 @@
     margin: 0px;
 }
 
+#logout {
+    text-align: right;
+    margin-right: 20px;
+}
+
 nav ul{
     display: table;
     margin: 0 auto;
@@ -112,3 +117,19 @@ nav ul{
 .container {
     margin-top: 40px;
 }
+
+#logout button {
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    /* background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%); */
+    background-color: #00acaf;
+    transition: .4s;
+  }
+  
+#logout button:hover {
+    /* background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%); */
+    background-color: rgba(7, 88, 88, 0.651);
+  }

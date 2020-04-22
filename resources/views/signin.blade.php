@@ -18,7 +18,7 @@
     </div>
     <div class='contents'>
         <div class="login">
-            <form method='post' action='/signin'>
+            <form id='signin' method='post' action='/signin'>
                 <span>ログイン</span>
                 @if ($errors->has('email'))
                     <p class="error_msg">{{ $errors->first('email') }}</p>

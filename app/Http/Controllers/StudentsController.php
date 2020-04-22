@@ -138,8 +138,48 @@ class StudentsController extends Controller
     }
     }
 
-    public function ses_del (Request $request, $id) {
-        $request->session()->forget('id');
-        // return view('mypage');
+    public function change_password (Request $request) {
+        $user = $request->session()->get('user');
+        $before_password = $request->input('before_password');
+        $after_password = $request->input('after_password');
+
+        $inputs = $request->all();
+
+        $rules = [
+            'before_password'=>'required',
+            'after_password' => 'required',
+        ];
+        //message
+        $messages = [
+            'before_password.required' => '現在のパスワードを入力してください',
+            'after_password.required' => '新しいパスワードを入力してください',
+        ];
+        //validation
+        $validation = Validator::make($inputs, $rules, $messages);
+        if($validation->fails()){
+            return redirect()->back()->withErrors($validation->errors())->withInput();
+        }else{
+            //生徒の情報を取得
+            $student = Students::select('id', 'password')
+            ->where('id', '=', $user)
+            ->first();
+
+            if($student['password'] == $before_password){
+                Students::where('id', '=', $user)
+                ->update(['password' => $after_password]);
+                $success = 'パスワードの変更が完了しました';
+                return view('option', compact('success'));
+            }else{
+                $error = 'パスワードが正しくありません';
+                return view('option', compact('error'));
+            }
+        }
+
+        
+    }
+
+    public function ses_del (Request $request) {
+        $request->session()->forget('user');
+        return $this->index();
     }
 }

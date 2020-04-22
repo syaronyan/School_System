@@ -21,4 +21,5 @@ use App\Progress;
 
 Route::post('/progress', 'ProgressController@pro');
 // Route::post('/progress/done', 'ProgressController@index');
+Route::post('/logout', 'StudentsController@ses_del');
 

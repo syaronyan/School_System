@@ -14,6 +14,14 @@
     background-color: #def0f1;
   } 
   
+  #signin {
+    background-color: #fff;
+    max-width: 500px;
+    height: 500px;
+    padding-top: 20px;
+    margin: auto;
+  }
+
   form {
     background-color: #fff;
     max-width: 500px;

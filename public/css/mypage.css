@@ -1,11 +1,13 @@
 
 .progress_wrap{
     text-align: center;
-    height: 500px;
+}
+
+.progress_tasks{
+    text-align: left;
 }
 
 .progress_img{
-    float: left;
-    /* border:2px solid red; */
-    /* text-align: center; */
+    display: inline-block;
+    text-align: center;
 }
