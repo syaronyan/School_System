@@ -104,6 +104,17 @@ class StundentController extends Controller
         
     }
 
+    public function document(Request $request)
+    {
+        $user = $request->session()->get('user');
+        if (!empty($user)){
+            return view('document');
+        }else{
+            return $this->index();
+        }
+        
+    }
+
     public function signup()
     {
         return view('signup');
