@@ -32,10 +32,10 @@
         <div class='contents'>
             @yield('content')
         </div>
-            <footer id="footer">
-                <p>2020 Tech I.S. All rights reversed</p>
-                <a href=''>プライバシーポリシー</a>
-            </footer>
+        <footer id="footer">
+            <p>2020 Tech I.S. All rights reversed</p>
+            <a href=''>プライバシーポリシー</a>
+        </footer>
     </body>
 </html>
 <script>
@@ -46,24 +46,7 @@ $(function() {
         return false;
         }else{
         // OKの時の処理 
-        location.href = 'logout';
-            // $.ajax({
-            // url: "/api/logout", 
-            // type: "POST", // GET,POSTなどを指定
-            // data: { // データを指定
-            //     user : "1"
-            // }
-            // })
-            // .then(
-            // // 1つめは通信成功時のコールバック処理
-            // function (data) {
-                
-            // },
-            // // 2つめは通信失敗時のコールバック処理
-            // function () {
-                
-            // });
-            //     })
+        location.href = 'logout';        
         }
 });
 

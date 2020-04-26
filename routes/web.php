@@ -29,5 +29,5 @@ Route::get('/work/{id}', 'GroupController@subject');
 Route::post('/1', 'StudentsController@signup');
 Route::post('/change_password', 'StudentsController@change_password');
 Route::post('/signin', 'StudentsController@signin');
-Route::get('/work/{id}/{page}', 'PageController@aa');
+Route::get('/work/{id}/{page}', 'PageController@taskpage');
 Route::get('/logout', 'StudentsController@ses_del');

@@ -33,6 +33,16 @@
     margin: 0px;
 }
 
+#footer a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-family: arial;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+}
+
 #logout {
     text-align: right;
     margin-right: 20px;

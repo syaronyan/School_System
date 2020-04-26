@@ -113,7 +113,7 @@ class StudentsController extends Controller
                 array_push($group_ids, $progress_task['group_id']);
                 array_push($group_names, $progress_task['group_name']);
                 array_push($group_imgs, $progress_task['group_img']);
-                $parsent = ($progress_task['progress_count']/$progress_task['tasks_count'])*100;
+                $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
                 array_push($parcents, $parsent);
 
                 $progress_tasks_edit['group_ids'] = $group_ids;

@@ -277,6 +277,29 @@
                 </div>
             </ul>
             <ul class='lg_works'>
+                <b>事前準備</b>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/%E5%AD%A6%E7%BF%92%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9'>学習の進め方</a>
+                    </li>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/%E5%90%84%E7%A8%AE%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E3%81%94%E8%AA%AC%E6%98%8E'>各種ツールのご説明</a>
+                    </li>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/%E8%87%AA%E5%88%86%E3%81%AEPC%E3%81%AB%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B-Windows'>ローカル環境構築(Win)</a>
+                    </li>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/%E8%87%AA%E5%88%86%E3%81%AEPC%E3%81%AB%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B-Mac'>ローカル環境構築(Mac)</a>
+                    </li>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/mysql%E3%81%A7%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E4%BD%9C%E6%88%90'>mysqllへユーザの登録</a>
+                    </li>
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/mysqll%E3%81%AE%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92UTF8%E3%81%AB'>mysqllの文字コードをUTF8に</a>
+                    </li>
+                </div>
+            </ul>
+            <ul class='lg_works'>
                 <b>その他</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -398,7 +421,9 @@
                     <li class='sm_work'>
                         <a href='https://github.com/tech-is/student-wiki/wiki/codeigniter%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89'>codeigniterサンプルコード</a>
                     </li>
-
+                    <li class='sm_work'>
+                        <a href='https://github.com/tech-is/student-wiki/wiki/%E5%B0%B1%E8%81%B7%E6%B4%BB%E5%8B%95%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9'>就職活動の進め方</a>
+                    </li>
                 </div>
             </ul>
         </div> 
