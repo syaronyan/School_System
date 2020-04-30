@@ -54,7 +54,7 @@ class StundentController extends Controller
 
             //進捗管理のデータ取得
             $progress_tasks = Tasks::select(DB::raw('group_id, group.img_link as group_img, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count'))
-            ->join('Group', 'group.id', '=', 'tasks.group_id')
+            ->join('group', 'group.id', '=', 'tasks.group_id')
             ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
             ->groupBy('tasks.group_id')
             ->setBindings([':student_id'=>$user, ':check_flag'=>'1'])

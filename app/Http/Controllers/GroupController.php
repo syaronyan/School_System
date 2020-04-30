@@ -24,7 +24,7 @@ class GroupController extends Controller
         if (!empty($user)){
         $group = Group::where('id', '=', $id)->first();
 
-        $tasks = Tasks::leftJoin('Progress', function ($join) use ($user){
+        $tasks = Tasks::leftJoin('progress', function ($join) use ($user){
         $join->on('tasks.id', '=', 'progress.tasks_id')
         ->where('student_id', '=', $user);
         })

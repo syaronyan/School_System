@@ -33,7 +33,7 @@
             @yield('content')
         </div>
         <footer id="footer">
-            <p>2020 Tech I.S. All rights reversed</p>
+            <p>2020 TECH I.S. All rights reversed</p>
             <a href=''>プライバシーポリシー</a>
         </footer>
     </body>
