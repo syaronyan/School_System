@@ -115,9 +115,14 @@ class StundentController extends Controller
         
     }
 
-    public function signup()
+    public function signup(Request $request)
     {
-        return view('signup');
+        $user = $request->session()->get('user');
+        if ($user == 1){
+            return view('signup');
+        }else{
+            return $this->index();
+        }
     }
 
     //ログインしていたらwork画面へ遷移

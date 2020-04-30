@@ -3,6 +3,8 @@
 .background_wrapper {
     /* background-color:  rgba(246, 255, 125, 0.315); */
     background-color: #def0f1;
+    min-height: 100vh;
+    position: relative;
 }
 
 .sm_section {

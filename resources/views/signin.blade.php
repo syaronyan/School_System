@@ -12,10 +12,11 @@
 </head>
 <body>
     <div id='header'>
-        <div id='header_Title'>
-            <p>TECH I.S.<p>
+        <div id='header_Title' style='text-align:center;'>
+            <img src="{{ asset('storage/Title_logo.png') }}" >
         </div>
     </div>
+    <div class='background_wrapper'>
     <div class='contents'>
         <div class="login">
             <form id='signin' method='post' action='/signin'>
@@ -39,9 +40,14 @@
                 <!-- <a href="#">Forgot Password?</a> -->
                 @csrf
             </form>
-            <a href="/signup">初めての方はこちらから</a>
+            <!-- <a href="/signup">初めての方はこちらから</a> -->
         </div>
     </div>
+    </div>
+    <footer id="footer">
+        <p>2020 TECH I.S. All rights reversed</p>
+        <a href=''>プライバシーポリシー</a>
+    </footer>
 </body>
 </html>
     

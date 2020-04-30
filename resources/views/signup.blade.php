@@ -1,5 +1,23 @@
-@extends('layout.header')
-@section('content')
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/Top.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Sign.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/TaskPage.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div id='header'>
+        <div id='header_Title'>
+            <img src="{{ asset('storage/Title_logo.png') }}" >
+        </div>
+    </div>
+    <div class='background_wrapper'>
+    <div class='contents'>
     <div class="login">
         <form method='post' action='/1' id='signup'>
             <span>登録</span>
@@ -20,9 +38,16 @@
             <!-- <input type="checkbox" id="checkbox-1-1" class="custom-checkbox"> -->
             <!-- <label for="checkbox-1-1">Keep me Signed in</label> -->
             <button class="signin">
-                Sign In
+                Sign Up
             </button>
             @csrf 
         </form>
     </div>
-@endsection
+    </div>
+    </div>
+    <footer id="footer">
+        <p>2020 TECH I.S. All rights reversed</p>
+        <a href=''>プライバシーポリシー</a>
+    </footer>
+</body>
+</html>

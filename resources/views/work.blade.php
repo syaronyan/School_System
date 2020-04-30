@@ -4,7 +4,7 @@
 <div class='section'>{{ $group->name }}</div>
 
 <form method='post' action=''>
-    <table id='progress'>
+    <table id='progress' style="margin:auto">
         @foreach ($tasks as $task)
         <tr>
             <td>
@@ -25,14 +25,16 @@
     </table>
     @csrf
 </form>
-<div class='select'></div>
+<!-- 選択した数値を確認 -->
+<!-- <div class='select'></div> -->
 <script>
-$(function() {
-    $('input:checkbox').change(function() {
-        var cnt = $('#progress input:checkbox:checked').length;
-        $('div.select').text('選択：' + cnt + '個');
-    }).trigger('change');
-});
+    // 選択した数値を確認ロジック
+// $(function() {
+//     $('input:checkbox').change(function() {
+//         var cnt = $('#progress input:checkbox:checked').length;
+//         $('div.select').text('選択：' + cnt + '個');
+//     }).trigger('change');
+// });
 
 $(function() {
     $('input:checkbox').change(function() {

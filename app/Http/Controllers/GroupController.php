@@ -20,25 +20,30 @@ class GroupController extends Controller
     //課題を取得する
     public function subject (Request $request, $id) 
     {
-        $user = $request->session()->get('user');
-        if (!empty($user)){
-        $group = Group::where('id', '=', $id)->first();
-
-        $tasks = Tasks::leftJoin('progress', function ($join) use ($user){
-        $join->on('tasks.id', '=', 'progress.tasks_id')
-        ->where('student_id', '=', $user);
-        })
-        ->select('student_id', 'group_id', 'tasks.id as tasks_id', 'link', 'r_o_link', 'check_flag', 'tasks.name as tasks_name')
-        ->where('group_id', '=', $id)
-        ->get();
-        //生徒の情報を取得
-        $student = Students::select('id', 'name', 'email')
-        ->where('id', '=', $user)
-        ->get();
-            //課題と生徒の情報を持ってworkに遷移
-            return view('work', compact('group','tasks', 'student'));
-        }else{
+        if($id == 'logout'){
+            header('Location: https://learning.techis.jp/logout');
             return $this->index();
+        }else{
+            $user = $request->session()->get('user');
+            if (!empty($user)){
+            $group = Group::where('id', '=', $id)->first();
+    
+            $tasks = Tasks::leftJoin('progress', function ($join) use ($user){
+            $join->on('tasks.id', '=', 'progress.tasks_id')
+            ->where('student_id', '=', $user);
+            })
+            ->select('student_id', 'group_id', 'tasks.id as tasks_id', 'link', 'r_o_link', 'check_flag', 'tasks.name as tasks_name')
+            ->where('group_id', '=', $id)
+            ->get();
+            //生徒の情報を取得
+            $student = Students::select('id', 'name', 'email')
+            ->where('id', '=', $user)
+            ->get();
+                //課題と生徒の情報を持ってworkに遷移
+                return view('work', compact('group','tasks', 'student'));
+            }else{
+                return $this->index();
+            }
         }
     }
 }

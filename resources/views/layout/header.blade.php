@@ -14,14 +14,14 @@
     <body>
         <div id='header'>
             <div id='header_Title' style='display:inline;'>
-                <p>TECH I.S.</p>
+                <img src="{{ asset('storage/Title_logo.png') }}" width="499.9" height="90.7">
             </div>
             <div id='logout'>
                     <button id='logout_button' value='logout'>ログアウト</button>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="/mypage">マイページ</a></li>
+                    <li><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="/option">パスワード変更</a></li>
                     <li><a href="/document">参考資料</a></li>
@@ -29,8 +29,10 @@
                 </ul>
             </nav>
         </div>
+        <div class='background_wrapper'>
         <div class='contents'>
             @yield('content')
+        </div>
         </div>
         <footer id="footer">
             <p>2020 TECH I.S. All rights reversed</p>
