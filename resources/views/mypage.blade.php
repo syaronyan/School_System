@@ -5,7 +5,9 @@
         @for($i=0; $i < 6; $i++)
             <div class='progress_img'>
                 <div>
-                    <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    <a href="/work/{{ $progress_tasks_edit['group_ids'][$i] }}">
+                        <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    </a>
                 </div>
                 <div>
                     <progress value="{{ $progress_tasks_edit['parcents'][$i] }}" max="100"></progress>
@@ -21,7 +23,9 @@
         @for($i=6; $i < 13; $i++)
             <div class='progress_img'>
                 <div>
-                    <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    <a href="/work/{{ $progress_tasks_edit['group_ids'][$i] }}">
+                        <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    </a>
                 </div>
                 <div>
                     <progress value="{{ $progress_tasks_edit['parcents'][$i] }}" max="100"></progress>
@@ -37,7 +41,9 @@
         @for($i=13; $i < 17; $i++)
             <div class='progress_img'>
                 <div>
-                    <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    <a href="/work/{{ $progress_tasks_edit['group_ids'][$i] }}">
+                        <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                    </a>
                 </div>
                 <div>
                     <progress value="{{ $progress_tasks_edit['parcents'][$i] }}" max="100"></progress>

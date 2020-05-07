@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'>プロジェクト＆仕様決め</div>
+    <div class='section'><a class='back' href="/work/15">⬅︎</a>　プロジェクト＆仕様決め</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>

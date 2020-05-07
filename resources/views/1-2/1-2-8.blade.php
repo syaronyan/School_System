@@ -1,10 +1,10 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'>プチプログラム（難易度：★★★☆☆）</div>
+    <div class='section'><a class='back' href="/work/2">⬅︎</a>　プチプログラム（難易度：★★★☆☆）</div>
         <div class='ul-align-center'>
             <ul class='lg_works'>
-                <p class='sm_section'>じゃんけんプログラム<p>
+                <p class='sm_section'>じゃんけんプログラム <img src="{{ asset('storage/Required.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
                         URLのようにじゃんけんプログラムを作ってください。
@@ -15,7 +15,7 @@
                 </div>
             </ul>
             <ul class='lg_works'>
-                <p class='sm_section'>曜日判定アプリ<p>
+                <p class='sm_section'>曜日判定アプリ <img src="{{ asset('storage/Option.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
                         日付を入力するとその日が何曜日かを教えてくれるWEBアプリを作成してください。
@@ -26,7 +26,7 @@
                 </div>
             </ul>
             <ul class='lg_works'>
-                <p class='sm_section'>電卓アプリ<p>
+                <p class='sm_section'>電卓アプリ <img src="{{ asset('storage/Option.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
                         簡単な電卓アプリを作ってください。
@@ -34,7 +34,7 @@
                 </div>
             </ul>
             <ul class='lg_work'>
-                <p class='sm_section'>NGワード判別<p>
+                <p class='sm_section'>NGワード判別 <img src="{{ asset('storage/Option.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
                         このCSVファイルを自分のサーバに入れ、PHPでこのCSVのリストに書かれているNGワードがあるかないか判別する関数を作成してください。

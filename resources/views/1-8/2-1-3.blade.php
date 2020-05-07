@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'>登録データの格納処理（難易度：★★★☆☆）</div>
+    <div class='section'><a class='back' href="/work/8">⬅︎</a>　登録データの格納処理（難易度：★★★☆☆）</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>
