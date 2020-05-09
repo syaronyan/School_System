@@ -1,3 +1,6 @@
+<?php
+$today = new DateTime();
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -17,6 +20,7 @@
                 <img src="{{ asset('storage/Title_logo.png') }}" width="499.9" height="90.7">
             </div>
             <div id='logout'>
+                    <div id='date'></div>
                     <button id='logout_button' value='logout'>ログアウト</button>
             </div>
             <nav>
@@ -41,6 +45,12 @@
     </body>
 </html>
 <script>
+$(document).ready(function(){
+    <?php $startdate = new DateTime('2018-02-05');
+        $diff = $today->diff($startdate);?>
+    $('#date').text('<?php echo $diff->format('総日数:%a日');?>');
+});
+
 $(function() {
     $('#logout_button').on('click', function() {
         if(!confirm('ログアウトしますか？')){
@@ -53,4 +63,54 @@ $(function() {
 });
 
 });
+
+$(function() {
+    var offset = $('#side-menu').offset();
+ 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > offset.top) {
+            $('#side-menu').addClass('fixed');
+        } else {
+            $('#side-menu').removeClass('fixed');
+        }
+    });
+});
+
+var video = document.getElementsByClassName("mv");
+var btn_1 = document.getElementById("Speed_1");
+var btn_2 = document.getElementById("Speed_1.25");
+var btn_3 = document.getElementById("Speed_1.5");
+var btn_4 = document.getElementById("Speed_1.75");
+var btn_5 = document.getElementById("Speed_2");
+
+btn_5.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 2;
+    }
+},false);
+
+btn_1.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 1.75;
+    }
+},false);
+
+btn_3.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 1.5;
+    }
+},false);
+
+btn_1.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 1.25;
+    }
+},false);
+
+btn_1.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 1;
+    }
+},false);
+
 </script>

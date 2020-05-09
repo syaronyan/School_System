@@ -11,7 +11,6 @@
     color: #ffffff;
     padding: 0px;
     margin: 0px;
-    text-align: center;
 }
 
 #header_Title p{
@@ -61,11 +60,13 @@ nav ul{
     display: table-cell;
     min-width: 50px;
     font-size: 20px;
-    
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);   
 }
 
 nav li+ li {
     border-left: 3px solid rgb(255, 255, 255);
+    border-left: none;
   }
 
     nav a{

@@ -12,8 +12,8 @@
 </head>
 <body>
     <div id='header'>
-        <div id='header_Title' style='text-align:center;'>
-            <img src="{{ asset('storage/Title_logo.png') }}" >
+        <div style='text-align:center;'>
+            <img src="{{ asset('storage/Title_logo.png') }}" style='max-width:100%; height:auto;'>
         </div>
     </div>
     <div class='background_wrapper'>

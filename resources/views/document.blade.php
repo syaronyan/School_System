@@ -2,8 +2,32 @@
 @section('content')
 <div class='background_wrapper'>
     <div class='section'>参考資料</div>
+        <div id="side-menu" class="side-menu">
+            <ul class="menu">
+                <li><a href="#01">基礎課題1-1</a></li>
+                <li><a href="#02">基礎課題1-2</a></li>
+                <li><a href="#03">基礎課題1-3</a></li>
+                <li><a href="#04">基礎課題1-4</a></li>
+                <li><a href="#05">基礎課題1-5</a></li>
+                <li><a href="#06">基礎課題1-6</a></li>
+                <li><a href="#07">応用課題1-0</a></li>
+                <li><a href="#08">応用課題1-1</a></li>
+                <li><a href="#09">応用課題1-2</a></li>
+                <li><a href="#10">応用課題1-3</a></li>
+                <li><a href="#11">応用課題1-4</a></li>
+                <li><a href="#12">応用課題1-5</a></li>
+                <li><a href="#13">応用課題1-6</a></li>
+                <li><a href="#14">基礎課題2-1</a></li>
+                <li><a href="#15">基礎課題2-2</a></li>
+                <li><a href="#16">基礎課題2-3</a></li>
+                <li><a href="#17">基礎課題2-4</a></li>
+                <li><a href="#18">事前準備</a></li>
+                <li><a href="#19">その他</a></li>
+                <li><a href="#20">コラム</a></li>
+            </ul>
+        </div>
         <div class='ul-align-center'>
-            <ul class='lg_works'>
+            <ul id='01' class='lg_works'>
                 <b>基礎課題1-1</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -44,7 +68,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='02' class='lg_works'>
                 <b>基礎課題1-2</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -65,7 +89,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='03' class='lg_works'>
                 <b>基礎課題1-3</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -84,7 +108,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='04' class='lg_works'>
                 <b>基礎課題1-4</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -106,7 +130,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='05' class='lg_works'>
                 <b>基礎課題1-5</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -119,7 +143,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='06' class='lg_works'>
                 <b>基礎課題1-6</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -132,7 +156,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='07' class='lg_works'>
                 <b>応用課題1-0</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -140,7 +164,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='08' class='lg_works'>
                 <b>応用課題1-1</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -148,7 +172,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='09' class='lg_works'>
                 <b>応用課題1-2</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -156,7 +180,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='10' class='lg_works'>
                 <b>応用課題1-3</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -169,7 +193,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='11' class='lg_works'>
                 <b>応用課題1-4</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -177,7 +201,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='12' class='lg_works'>
                 <b>応用課題1-5</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -210,7 +234,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='13' class='lg_works'>
                 <b>応用課題1-6</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -241,7 +265,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='14' class='lg_works'>
                 <b>基礎課題2-1</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -249,7 +273,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='15' class='lg_works'>
                 <b>基礎課題2-2</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -257,7 +281,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='16' class='lg_works'>
                 <b>基礎課題2-3</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -265,7 +289,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='17' class='lg_works'>
                 <b>基礎課題2-4</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -276,7 +300,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='18' class='lg_works'>
                 <b>事前準備</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -299,7 +323,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_works'>
+            <ul id='19' class='lg_works'>
                 <b>その他</b>
                 <div class='work_block'>
                     <li class='sm_work'>
@@ -349,7 +373,7 @@
                     </li>
                 </div>
             </ul>
-            <ul class='lg_work'>
+            <ul id='20' class='lg_work'>
                 <b>コラム</b>
                 <div class='work_block'>
                     <li class='sm_work'>

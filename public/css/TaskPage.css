@@ -58,3 +58,42 @@
     font-weight: 100;
 }
 
+.menu{
+    float: right;
+    padding:0;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 0;
+    z-index: 1000;
+}
+
+.fixed {
+    position: fixed; /* 画面に固定して追従させます */
+    top: 0vh; /* 表示画面の上から20%のところから表示を始めます */
+      right:0; /* 固定位置は右側 */
+      font-size:0;
+}
+
+.side-menu ul{
+    text-align: left;
+}
+
+.side-menu li{
+    border-radius: 4px;
+    background-color: rgba(255, 111, 111, 0.7);
+    margin-top: 5px;
+}
+
+.side-menu li a{
+    font-size:1rem; /*  フォントサイズ0になっているので指定する */
+    /* 以下、装飾 */
+      /* padding:20px 24px; */
+    color:rgb(0, 0, 0);
+}
+
+.bottom_btn{
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+

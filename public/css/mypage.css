@@ -11,3 +11,7 @@
     display: inline-block;
     text-align: center;
 }
+
+.progress_img img:hover{
+    opacity: 0.5 ;
+}
