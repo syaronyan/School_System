@@ -17,9 +17,10 @@ $today = new DateTime();
     <body>
         <div id='header'>
             <div id='header_Title' style='display:inline;'>
-                <img src="{{ asset('storage/Title_logo.png') }}" width="499.9" height="90.7">
+                <img src="{{ asset('storage/Title_logo.png') }}" width="264.48" height="72.56">
             </div>
             <div id='logout'>
+                    <div id='user_name'></div>
                     <div id='date'></div>
                     <button id='logout_button' value='logout'>ログアウト</button>
             </div>
@@ -46,7 +47,10 @@ $today = new DateTime();
 </html>
 <script>
 $(document).ready(function(){
-    <?php $startdate = new DateTime('2018-02-05');
+    $('#user_name').text('<?php echo $student['name'];?>でログインしています');
+});
+$(document).ready(function(){
+    <?php $startdate = new DateTime($student['created_at']);
         $diff = $today->diff($startdate);?>
     $('#date').text('<?php echo $diff->format('総日数:%a日');?>');
 });
@@ -69,9 +73,11 @@ $(function() {
  
     $(window).scroll(function () {
         if ($(window).scrollTop() > offset.top) {
+            $('#side-menu').removeClass('side-menu');
             $('#side-menu').addClass('fixed');
         } else {
             $('#side-menu').removeClass('fixed');
+            $('#side-menu').addClass('side-menu');
         }
     });
 });

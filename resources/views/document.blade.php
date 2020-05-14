@@ -2,31 +2,31 @@
 @section('content')
 <div class='background_wrapper'>
     <div class='section'>参考資料</div>
-        <div id="side-menu" class="side-menu">
-            <ul class="menu">
-                <li><a href="#01">基礎課題1-1</a></li>
-                <li><a href="#02">基礎課題1-2</a></li>
-                <li><a href="#03">基礎課題1-3</a></li>
-                <li><a href="#04">基礎課題1-4</a></li>
-                <li><a href="#05">基礎課題1-5</a></li>
-                <li><a href="#06">基礎課題1-6</a></li>
-                <li><a href="#07">応用課題1-0</a></li>
-                <li><a href="#08">応用課題1-1</a></li>
-                <li><a href="#09">応用課題1-2</a></li>
-                <li><a href="#10">応用課題1-3</a></li>
-                <li><a href="#11">応用課題1-4</a></li>
-                <li><a href="#12">応用課題1-5</a></li>
-                <li><a href="#13">応用課題1-6</a></li>
-                <li><a href="#14">基礎課題2-1</a></li>
-                <li><a href="#15">基礎課題2-2</a></li>
-                <li><a href="#16">基礎課題2-3</a></li>
-                <li><a href="#17">基礎課題2-4</a></li>
-                <li><a href="#18">事前準備</a></li>
-                <li><a href="#19">その他</a></li>
-                <li><a href="#20">コラム</a></li>
-            </ul>
-        </div>
-        <div class='ul-align-center'>
+    <div id="side-menu" class="side-menu">
+        <ul class="menu">
+            <li><a href="#01">基礎課題1-1</a></li>
+            <li><a href="#02">基礎課題1-2</a></li>
+            <li><a href="#03">基礎課題1-3</a></li>
+            <li><a href="#04">基礎課題1-4</a></li>
+            <li><a href="#05">基礎課題1-5</a></li>
+            <li><a href="#06">基礎課題1-6</a></li>
+            <li><a href="#07">応用課題1-0</a></li>
+            <li><a href="#08">応用課題1-1</a></li>
+            <li><a href="#09">応用課題1-2</a></li>
+            <li><a href="#10">応用課題1-3</a></li>
+            <li><a href="#11">応用課題1-4</a></li>
+            <li><a href="#12">応用課題1-5</a></li>
+            <li><a href="#13">応用課題1-6</a></li>
+            <li><a href="#14">基礎課題2-1</a></li>
+            <li><a href="#15">基礎課題2-2</a></li>
+            <li><a href="#16">基礎課題2-3</a></li>
+            <li><a href="#17">基礎課題2-4</a></li>
+            <li><a href="#18">事前準備</a></li>
+            <li><a href="#19">その他</a></li>
+            <li><a href="#20">コラム</a></li>
+        </ul>
+    </div>
+    <div class='ul-align-center'>
             <ul id='01' class='lg_works'>
                 <b>基礎課題1-1</b>
                 <div class='work_block'>

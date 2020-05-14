@@ -24,7 +24,11 @@ class StundentController extends Controller
         if (!empty($user)){
             $groups = Group::select('id', 'name', 'tools', 'img_link')
             ->get();
-            return view('Top', compact('groups'));
+            //生徒の情報を取得
+            $student = Students::select('id', 'name', 'email', 'created_at')
+            ->where('id', '=', $user)
+            ->first();
+            return view('Top', compact('groups', 'student'));
         }else{
             return $this->index();
         }
@@ -75,7 +79,7 @@ class StundentController extends Controller
             }
 
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email')
+            $student = Students::select('id', 'name', 'email', 'created_at')
             ->where('id', '=', $user)
             ->first();
 
@@ -97,7 +101,11 @@ class StundentController extends Controller
         if (!empty($user)){
             $groups = Group::select('id', 'name', 'tools', 'img_link')
             ->get();
-            return view('option');
+            //生徒の情報を取得
+            $student = Students::select('id', 'name', 'email', 'created_at')
+            ->where('id', '=', $user)
+            ->first();
+            return view('option', compact('student'));
         }else{
             return $this->index();
         }
@@ -108,7 +116,11 @@ class StundentController extends Controller
     {
         $user = $request->session()->get('user');
         if (!empty($user)){
-            return view('document');
+            //生徒の情報を取得
+            $student = Students::select('id', 'name', 'email', 'created_at')
+            ->where('id', '=', $user)
+            ->first();
+            return view('document', compact('student'));
         }else{
             return $this->index();
         }
@@ -126,13 +138,17 @@ class StundentController extends Controller
     }
 
     //ログインしていたらwork画面へ遷移
-    public function work(Request $request)
-    {
-        $user = $request->session()->get('user');
-        if (!empty($user)){
-            return view('work');
-        }else{
-            return $this->index();
-        }
-    }
+    // public function work(Request $request)
+    // {
+    //     $user = $request->session()->get('user');
+    //     if (!empty($user)){
+    //         //生徒の情報を取得
+    //         $student = Students::select('id', 'name', 'email', 'created_at')
+    //         ->where('id', '=', $user)
+    //         ->first();
+    //         return view('work', compact('student'));
+    //     }else{
+    //         return $this->index();
+    //     }
+    // }
 }

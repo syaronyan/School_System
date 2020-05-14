@@ -58,7 +58,12 @@
     font-weight: 100;
 }
 
-.menu{
+.side-menu{
+    position: absolute;
+    right: 0; 
+}
+
+#side-menu ul{
     float: right;
     padding:0;
     margin-left: auto;
@@ -74,26 +79,33 @@
       font-size:0;
 }
 
-.side-menu ul{
+#side-menu ul{
     text-align: left;
 }
 
-.side-menu li{
+#side-menu li{
     border-radius: 4px;
-    background-color: rgba(255, 111, 111, 0.7);
+    background-color: #00acaf;
+    padding:3px;
     margin-top: 5px;
 }
 
-.side-menu li a{
+#side-menu li:hover {
+    background-color: rgba(7, 88, 88, 0.651);
+  }
+
+#side-menu li a{
     font-size:1rem; /*  フォントサイズ0になっているので指定する */
     /* 以下、装飾 */
       /* padding:20px 24px; */
-    color:rgb(0, 0, 0);
+    color:#fff;
+    text-decoration: none;
 }
 
 .bottom_btn{
     position: fixed;
     bottom: 0;
+    margin-bottom: 16px;
     z-index: 1000;
 }
 

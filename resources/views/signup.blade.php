@@ -19,7 +19,7 @@
     <div class='background_wrapper'>
     <div class='contents'>
     <div class="login">
-        <form method='post' action='/1' id='signup'>
+        <form method='post' action='/signup' id='signup'>
             <span>登録</span>
             @if ($errors->has('name'))
                 <p class="error_msg">{{ $errors->first('name') }}</p>

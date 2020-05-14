@@ -26,7 +26,7 @@ Route::get('/signup', 'StundentController@signup');
 
 Route::get('/work/{id}', 'GroupController@subject');
 //Route::get('/work/{id}', 'TasksController@task');
-Route::post('/1', 'StudentsController@signup');
+Route::post('/signup', 'StudentsController@signup');
 Route::post('/change_password', 'StudentsController@change_password');
 Route::post('/signin', 'StudentsController@signin');
 Route::get('/work/{id}/{page}', 'PageController@taskpage');

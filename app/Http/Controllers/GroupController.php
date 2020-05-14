@@ -26,21 +26,21 @@ class GroupController extends Controller
         }else{
             $user = $request->session()->get('user');
             if (!empty($user)){
-            $group = Group::where('id', '=', $id)->first();
-    
-            $tasks = Tasks::leftJoin('progress', function ($join) use ($user){
-            $join->on('tasks.id', '=', 'progress.tasks_id')
-            ->where('student_id', '=', $user);
-            })
-            ->select('student_id', 'group_id', 'tasks.id as tasks_id', 'link', 'r_o_link', 'check_flag', 'tasks.name as tasks_name')
-            ->where('group_id', '=', $id)
-            ->get();
-            //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email')
-            ->where('id', '=', $user)
-            ->get();
+                $group = Group::where('id', '=', $id)->first();
+        
+                $tasks = Tasks::leftJoin('progress', function ($join) use ($user){
+                $join->on('tasks.id', '=', 'progress.tasks_id')
+                ->where('student_id', '=', $user);
+                })
+                ->select('student_id', 'group_id', 'tasks.id as tasks_id', 'link', 'r_o_link', 'check_flag', 'tasks.name as tasks_name')
+                ->where('group_id', '=', $id)
+                ->get();
+                //生徒の情報を取得
+                $student = Students::select('id', 'name', 'email', 'created_at')
+                ->where('id', '=', $user)
+                ->get();
                 //課題と生徒の情報を持ってworkに遷移
-                return view('work', compact('group','tasks', 'student'));
+                return view('work', compact('student','group','tasks'));
             }else{
                 return $this->index();
             }

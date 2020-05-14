@@ -25,6 +25,12 @@
     </table>
     @csrf
 </form>
+@foreach ($student as $student)
+<?php $student_id = $student->id;
+
+?>
+<p><?php //echo $student_id?></p>
+@endforeach
 <!-- 選択した数値を確認 -->
 <!-- <div class='select'></div> -->
 <script>
@@ -35,6 +41,8 @@
 //         $('div.select').text('選択：' + cnt + '個');
 //     }).trigger('change');
 // });
+
+
 
 $(function() {
     $('input:checkbox').change(function() {
@@ -50,7 +58,7 @@ $(function() {
     url: "/api/progress", 
     type: "POST", // GET,POSTなどを指定
     data: { // データを指定
-        student_id : "1",
+        student_id : <?php echo $student_id ?>,
         tasks_id : $(this).attr('id'),
         check_flag : flag,
     }

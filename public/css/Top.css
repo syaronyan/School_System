@@ -13,6 +13,11 @@
     margin: 0px;
 }
 
+#header_Title img{
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
 #header_Title p{
     padding: 0px;
     margin: 0px;
@@ -46,6 +51,10 @@
 #logout {
     text-align: right;
     margin-right: 20px;
+}
+
+nav{
+    clear: both;
 }
 
 nav ul{
@@ -135,6 +144,12 @@ nav li+ li {
 
 .container {
     margin-top: 40px;
+}
+
+#logout{
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #logout button {
