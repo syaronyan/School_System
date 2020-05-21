@@ -31,3 +31,8 @@ Route::post('/change_password', 'StudentsController@change_password');
 Route::post('/signin', 'StudentsController@signin');
 Route::get('/work/{id}/{page}', 'PageController@taskpage');
 Route::get('/logout', 'StudentsController@ses_del');
+
+
+
+Route::get('/admin', 'AdminController@admin');
+Route::get('/admin/students', 'AdminController@students');
