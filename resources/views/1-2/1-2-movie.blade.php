@@ -69,11 +69,30 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_01.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習問題</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                        なし
+                    </li>
+                </div>
+            </ul>
             </ul>
             <ul id='02' class='lg_work'>
                 <b>HELLO TECH I.S.を表示しよう</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_02.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    xamppもしくはmampを起動し、実際に「HELLO TECH I.S」を表示しよう。
+                    </li>
+                </div>
+                <p class='sm_section'>演習[2]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    「HELLO TECH I.S」の文字をCSSを使って大きくしてみよう。
+                    </li>
                 </div>
             </ul>
             <ul id='03' class='lg_work'>
@@ -81,11 +100,43 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_03.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    実際に変数を作って 1000を代入してみよう。
+                    </li>
+                    <li class='sm_work'>
+	                その後、echoでその変数を出力してみよう。
+                    </li>
+                </div>
+                <p class='sm_section'>演習[2]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    実際に定数を作って "愛媛県" という文字列を代入してみよう。
+                    </li>
+                    <li class='sm_work'>
+                    その後、echoでその変数を出力してみよう。
+                    </li>
+                </div>
             </ul>
             <ul id='04' class='lg_work'>
                 <b>計算をしてみよう</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_04.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    PHPを使って実際に足し算・引き算・かけ算・割り算をしてみよう。
+                    </li>
+                </div>
+                <p class='sm_section'>演習[2]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    3＋7＋50×50 をPHPで計算してみよう。
+                    </li>
+                    <p class='attention'>※注意　プログラムはかけ算を先に計算をしてくれません。左から順番に計算します。
+		                先に計算させる部分にはカッコをつけて先に計算させる必要があります。<p>
                 </div>
             </ul>
             <ul id='05' class='lg_work'>
@@ -93,11 +144,23 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_05.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    変数に文字列を格納し、表示してみよう。
+                    </li>
+                </div>
             </ul>
             <ul id='06' class='lg_work'>
                 <b>if文について</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_06.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    if文を使って先ほどの動画であった「30点未満：赤点 100点：満点 30点以上100点未満：合格」となるif文を書いてみよう。
+                    </li>
                 </div>
             </ul>
             <ul id='07' class='lg_work'>
@@ -105,11 +168,23 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_07.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    先ほどの動画であった「30点未満：赤点 100点：満点 30点以上100点未満：合格」をswitch文で書いてみよう。
+                    </li>
+                </div>
             </ul>
             <ul id='08' class='lg_work'>
                 <b>while文ついて</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_08.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    変数a に1000を代入し、2ずつ引いて0になったらループを終了するwhile文を書いてみよう。
+                    </li>
                 </div>
             </ul>
             <ul id='09' class='lg_work'>
@@ -117,11 +192,29 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_09.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：for文を使って1から1000まで順々に足していってみよう。500500になると正解です
+                    </li>
+                </div>
             </ul>
             <ul id='10' class='lg_work'>
                 <b>配列を使ってみよう</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_10.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：好きな野菜を５種類選び、配列に格納してみよう。
+                    </li>
+                </div>
+                <p class='sm_section'>演習[2]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：さきほどの配列をfor文を使って画面に出力してみよう。
+                    </li>
                 </div>
             </ul>
             <ul id='11' class='lg_work'>
@@ -129,11 +222,23 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_11.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：好きな野菜・果物をそれぞれ５種類選び、配列に格納してみよう。
+                    </li>
+                </div>
             </ul>
             <ul id='12' class='lg_work'>
                 <b>foreachについて</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_12.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：Part.11で作った連想配列をforeach文を使って画面に出力してみよう。
+                    </li>
                 </div>
             </ul>
             <ul id='13' class='lg_work'>
@@ -141,17 +246,49 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_13.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    例：動画で説明のあった二次元配列を実際に書いてみて、print_rで表示してみよう。
+                    </li>
+	　　            <p class='attention'>（chrome表示後、右クリック→ページのソースを表示　で配列の構成は見やすくなります）</p>
+                </div>
             </ul>
             <ul id='14' class='lg_work'>
                 <b>関数について</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_14.mp4') }}" width="960" height="540" controls></video>
                 </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    以下の組込関数の一覧からどれか４つ選択し、実際に実行してみよう
+                    </li>
+                    <li class='comment'>
+                    <a href='https://www.php.net/manual/ja/indexes.functions.php'>https://www.php.net/manual/ja/indexes.functions.php</a>
+                    </li>  
+                </div>
+                <p class='sm_section'>演習[2]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    消費税を計算する自作関数を作ってみよう。
+                    </li>
+                </div>
             </ul>
             <ul id='15' class='lg_works'>
                 <b>スーパーグローバル変数</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_15.mp4') }}" width="960" height="540" controls></video>
+                </div>
+                <p class='sm_section'>演習[1]</p>
+                <div class='work_block'>
+                    <li class='sm_work'>
+                    スーパーグローバル変数の１つの以下を実行して内容を確認してみよう
+                    </li>
+	　　            <p class='attention'>print($_SERVER);</p>
+                    <li class='comment'>
+                    値の説明：<a href='https://www.php.net/manual/ja/reserved.variables.server.php'>https://www.php.net/manual/ja/reserved.variables.server.php</a>
+                    </li>    
                 </div>
             </ul>
         </div> 

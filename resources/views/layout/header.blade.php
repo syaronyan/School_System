@@ -41,7 +41,7 @@ $today = new DateTime();
         </div>
         <footer id="footer">
             <p>2020 TECH I.S. All rights reversed</p>
-            <a href=''>プライバシーポリシー</a>
+            <a href='https://techis.jp/privacy/'>プライバシーポリシー</a>
         </footer>
     </body>
 </html>

@@ -58,6 +58,10 @@
     font-weight: 100;
 }
 
+.attention {
+    text-align: left;
+}
+
 .side-menu{
     position: absolute;
     right: 0; 
