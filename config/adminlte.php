@@ -232,8 +232,8 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => '#',
+            'text' => 'Add Student',
+            'url'  => 'admin/add',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

@@ -36,3 +36,5 @@ Route::get('/logout', 'StudentsController@ses_del');
 
 Route::get('/admin', 'AdminController@admin');
 Route::get('/admin/students', 'AdminController@students');
+Route::get('/admin/add', 'AdminController@add');
+Route::post('/admin/signup', 'AdminController@signup');

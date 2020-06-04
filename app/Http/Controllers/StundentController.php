@@ -130,7 +130,7 @@ class StundentController extends Controller
     public function signup(Request $request)
     {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             return view('signup');
         }else{
             return $this->index();
