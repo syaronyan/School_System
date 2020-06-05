@@ -12,7 +12,7 @@
                     内閣府の祝祭日CSV
                         <ul>
                             <li class='comment'>
-                                URL:<a href='https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu_kyujitsu.csv'>https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu_kyujitsu.csv</a>
+                                URL:<a href='https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv'>https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv</a>
                             </li>
                         </ul>
                     </li>

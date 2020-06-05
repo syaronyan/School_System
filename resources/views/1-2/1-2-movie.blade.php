@@ -266,7 +266,15 @@
                     </li>
                     <li class='comment'>
                     <a href='https://www.php.net/manual/ja/indexes.functions.php'>https://www.php.net/manual/ja/indexes.functions.php</a>
-                    </li>  
+                    </li>
+                    <p class='attention'>※難しければ以下よく使うのでおススメです<br>
+                    <b>[MB 文字列系の関数]</b><br> 
+                    <a href='https://www.php.net/manual/ja/ref.mbstring.php'>https://www.php.net/manual/ja/ref.mbstring.php</a><br>
+                    <b>[PHP の設定確認用関数]</b><br>
+                    <a href='https://www.php.net/manual/ja/function.phpinfo.php'>https://www.php.net/manual/ja/function.phpinfo.php</a><br>
+                    <b>[日付関係の関数]</b><br> 
+                    <a href='https://www.php.net/manual/ja/ref.datetime.php'>https://www.php.net/manual/ja/ref.datetime.php</a><br>
+                    </p>
                 </div>
                 <p class='sm_section'>演習[2]</p>
                 <div class='work_block'>

@@ -7,6 +7,12 @@
     position: relative;
 }
 
+.check_parts{
+padding-left: 20px;
+margin-right: 20px;
+}
+
+
 .sm_section {
     text-align: left;
     font-size: 20px;

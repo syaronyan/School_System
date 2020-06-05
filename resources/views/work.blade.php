@@ -9,13 +9,13 @@
         <tr>
             <td>
                 @if ($task->check_flag == 1)
-                <input type='checkbox' id='{{ $task->tasks_id }}' value="1" checked>
+                <input class='check' type='checkbox' id='{{ $task->tasks_id }}' value="1" checked>
                 @else
-                <input type='checkbox' id='{{ $task->tasks_id }}' value="1">
+                <input class='check' type='checkbox' id='{{ $task->tasks_id }}' value="1">
                 @endif
             </td>
             <td style="text-align: left">
-                <a href='{{ $group->id }}/{{ $task->link }}'>{{ $task->tasks_name }}</a>
+                <a class='check_parts' href='{{ $group->id }}/{{ $task->link }}'>{{ $task->tasks_name }}</a>
             </td>
             <td>
                 <img src="{{ asset('storage/') }}/{{ $task->r_o_link }}" width="40" height="20">

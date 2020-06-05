@@ -6,7 +6,7 @@
             <ul class='lg_work'>
                 <div class='work_block'>
                     <li class='sm_work'>
-                    以下の画面の通りに会員登録のフォームを作成してください。
+                    フォーム制作では、入力画面のフォームを作成します。
                     </li>
                     <li class='sm_work'>
                     覚えたHTMLとCSSを利用して作成してください。
@@ -16,6 +16,9 @@
                     </li>
                     <li class='sm_work'>
                     画面推移イメージとしては「入力画面→確認画面→完了画面」の３画面です。
+                    </li>
+                    <li class='sm_work'>
+                    ↓↓スクロールして入力画面制作（難易度：★★☆☆☆)から始めてください。
                     </li>
                 </div>
             </ul>

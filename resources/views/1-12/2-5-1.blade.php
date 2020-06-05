@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'><a class='back' href="/work/12">⬅︎</a>　姓名判断プログラム</div>
+    <!-- <div class='section'><a class='back' href="/work/12">⬅︎</a>　姓名判断プログラム</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>
@@ -11,12 +11,15 @@
                 </div>
             </ul>
         </div> 
-    </div>
+    </div> -->
     <div class='background_wrapper'>
     <div class='section'>ページ制作（難易度：★★☆☆☆）</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>
+                    <li class='sm_work'>
+                    名前を入力して占うと、総格から名前の運勢を占うプログラムを制作してください。
+                    </li>
                     <li class='sm_work'>
                     bootstrapを利用して綺麗に入力フォームを作成してください。
                     </li>
