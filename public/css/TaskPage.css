@@ -7,6 +7,12 @@
     position: relative;
 }
 
+.check_parts{
+padding-left: 20px;
+margin-right: 20px;
+}
+
+
 .sm_section {
     text-align: left;
     font-size: 20px;
@@ -56,6 +62,10 @@
     text-align: left;
     line-height: 24px;
     font-weight: 100;
+}
+
+.attention {
+    text-align: left;
 }
 
 .side-menu{

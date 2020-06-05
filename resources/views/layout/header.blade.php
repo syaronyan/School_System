@@ -12,7 +12,7 @@ $today = new DateTime();
         <link rel="stylesheet" href="{{ asset('css/Sign.css') }}">
         <link rel="stylesheet" href="{{ asset('css/TaskPage.css') }}">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <title>Document</title>
+    <title>【公式】TECH I.S オンラインカリキュラム</title>
     </head>
     <body>
         <div id='header'>
@@ -41,7 +41,7 @@ $today = new DateTime();
         </div>
         <footer id="footer">
             <p>2020 TECH I.S. All rights reversed</p>
-            <a href=''>プライバシーポリシー</a>
+            <a href='https://techis.jp/privacy/'>プライバシーポリシー</a>
         </footer>
     </body>
 </html>
