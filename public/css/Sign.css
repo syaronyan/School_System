@@ -89,7 +89,8 @@
 
   input[type="text"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="datetime"] {
     font-family: 'Montserrat', sans-serif;
     color: #000;
     padding: 20px;

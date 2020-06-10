@@ -34,6 +34,7 @@
             @endif
             <input type="password" class="text" name="password" placeholder="password">
             <input type="password" class="text" name="password_confirmation" placeholder="password">
+            <input type="datetime" class="text" name="ent_date" placeholder="入校日2020/04/04">
             <input type="hidden" name="status" value="1">
             <!-- <input type="checkbox" id="checkbox-1-1" class="custom-checkbox"> -->
             <!-- <label for="checkbox-1-1">Keep me Signed in</label> -->
