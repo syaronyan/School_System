@@ -8,7 +8,9 @@
             <button type="button" id='Speed_1.75'>1.75倍速</button>
             <button type="button" id='Speed_1.5'>1.5倍速</button>
             <button type="button" id='Speed_1.25'>1.25倍速</button>
-            <button type="button" id='Speed_1'>元に戻す</button>
+            <button type="button" id='Speed_1'>1倍速</button>
+            <button type="button" id='Speed_0.75'>0.75倍速</button>
+            <button type="button" id='Speed_0.5'>0.5倍速</button>
         </div>
             <ul class='lg_work'>
                 <div class='work_block'>
@@ -80,7 +82,7 @@
                     下記ユーザを作成しDB操作権限を付与した上で、MySQLにログインしてみましょう！
                     </li>
                     <p class='attention'>
-                    ユーザ名：test<br>
+                    ユーザー名：test<br>
                     パスワード：なんでもOK</p>
                 </div>
             </ul>
@@ -107,16 +109,16 @@
                     下記テーブルを作成してみましょう！
                     </li>
                     <p class='attention'>
-                    ユーザ名：test</p>
-                    <table>
-                        <tr>
+                    テーブル名：test</p>
+                    <table class='sql_sample' border="1">
+                        <tr class='colum'>
                             <td>カラム型</td>
                             <td>データ型</td>
                             <td>コメント</td>
                         </tr>
                         <tr>
                             <td>id</td>
-                            <td>int　auto_increment primary key	</td>
+                            <td>int auto_increment primary key	</td>
                             <td>番号</td>
                         </tr>
                         <tr>
@@ -125,12 +127,12 @@
                             <td>テストの項目</td>
                         </tr>
                         <tr>
-                            <td>regist</td>
+                            <td>regist_date</td>
                             <td>datetime</td>
                             <td>登録日</td>
                         </tr>
                         <tr>
-                            <td>update</td>
+                            <td>update_date</td>
                             <td>datetime</td>
                             <td>更新日</td>
                         </tr>
@@ -145,16 +147,16 @@
                 <p class='sm_section'>演習[1]</p>
                 <div class='work_block'>
                     <li class='sm_work'>
-                    tastテーブルに下記カラムを追加し、削除してみましょう！
+                    testテーブルに下記カラムを追加し、削除してみましょう！
                     </li>
-                    <table>
-                        <tr>
+                    <table class='sql_sample' border="1">
+                        <tr class='colum'>
                             <td>カラム型</td>
                             <td>データ型</td>
                             <td>コメント</td>
                         </tr>
                         <tr>
-                            <td>add</td>
+                            <td>add_column</td>
                             <td>varchar(32)</td>
                             <td>追加</td>
                         </tr>
@@ -185,8 +187,8 @@
                     </li>
                     <p class='attention'>
                     test：テスト<br>
-                    regist：（追加時点の時間を追加）<br>
-                    update：（何も追加しない）</p>
+                    regist_date：（「regist_date」カラムには追加時点の時間を登録してください。）<br>
+                    update_date：（「update_date」カラムには何も追加しないで良いです。）</p>
                 </div>
                 <p class='sm_section'>演習[2]</p>
                 <div class='work_block'>
@@ -201,8 +203,8 @@
                     </li>
                     <p class='attention'>
                     test：テスト更新<br>
-                    regist：（何も更新しない）<br>
-                    update：（追加時点の時間を追加）</p>
+                    regist_date：（「regist_date」カラムの内容は何も更新しないでください。）<br>
+                    update_date：（「update_date」カラムの内容は追加時点の時間に更新してください。）</p>
                     <p class='attention'>
                     ※IDが1のレコードを対象に修正してください。</p>
                 </div>

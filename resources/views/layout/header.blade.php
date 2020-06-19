@@ -88,6 +88,20 @@ var btn_2 = document.getElementById("Speed_1.25");
 var btn_3 = document.getElementById("Speed_1.5");
 var btn_4 = document.getElementById("Speed_1.75");
 var btn_5 = document.getElementById("Speed_2");
+var btn_6 = document.getElementById("Speed_0.5");
+var btn_7 = document.getElementById("Speed_0.75");
+
+btn_7.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 0.75;
+    }
+},false);
+
+btn_6.addEventListener("click",function(){
+    for (i = 0; i < video.length; i++) {
+        video[i].playbackRate = 0.5;
+    }
+},false);
 
 btn_5.addEventListener("click",function(){
     for (i = 0; i < video.length; i++) {
@@ -95,7 +109,7 @@ btn_5.addEventListener("click",function(){
     }
 },false);
 
-btn_1.addEventListener("click",function(){
+btn_4.addEventListener("click",function(){
     for (i = 0; i < video.length; i++) {
         video[i].playbackRate = 1.75;
     }
@@ -107,7 +121,7 @@ btn_3.addEventListener("click",function(){
     }
 },false);
 
-btn_1.addEventListener("click",function(){
+btn_2.addEventListener("click",function(){
     for (i = 0; i < video.length; i++) {
         video[i].playbackRate = 1.25;
     }
@@ -118,5 +132,6 @@ btn_1.addEventListener("click",function(){
         video[i].playbackRate = 1;
     }
 },false);
+
 
 </script>
