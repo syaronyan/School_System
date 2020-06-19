@@ -21,7 +21,7 @@
         </tr>
         @foreach( $all_students as $students )
         <tr>
-            <td>{{ $students['id'] }}</td>
+            <td><a href="/admin/users/{{$students['id']}}">{{ $students['id'] }}</a></td>
             <td>{{ $students['name'] }}</td>
             <td>{{ $students['email'] }}</td>
             <td>{{ $students['ent_date'] }}</td>

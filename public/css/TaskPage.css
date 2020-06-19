@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.sql_sample{
+    text-align: left;
+}
+
+.sql_sample .colum{
+    text-align: center;
+    font-weight: bold;
+    border-bottom: solid black 2px;
+}
+
 .check_parts{
 padding-left: 20px;
 margin-right: 20px;

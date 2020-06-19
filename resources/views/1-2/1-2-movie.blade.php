@@ -8,7 +8,9 @@
             <button type="button" id='Speed_1.75'>1.75倍速</button>
             <button type="button" id='Speed_1.5'>1.5倍速</button>
             <button type="button" id='Speed_1.25'>1.25倍速</button>
-            <button type="button" id='Speed_1'>元に戻す</button>
+            <button type="button" id='Speed_1'>1倍速</button>
+            <button type="button" id='Speed_0.75'>0.75倍速</button>
+            <button type="button" id='Speed_0.5'>0.5倍速</button>
         </div>
             <ul class='lg_work'>
                 <!-- <b>TECH I.S. 動画教材「PHP入門編」</b> -->

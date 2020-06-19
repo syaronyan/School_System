@@ -21,65 +21,72 @@ class StudentsController extends Controller
 
     public function signup (Request $request) 
     {
-        $inputs = $request->all();
-        //rules
-        $rules = [
-            'name'=>'required',
-            'email'=>'required|email',
-            'password'=>'required|confirmed',
-            'password_confirmation' => 'required',
-        ];
-        //message
-        $messages = [
-            'name.required' => '名前は必須です',
-            'email.required' => 'emailは必須です',
-            'password.required' => 'パスワードは必須です',
-            'password.confirmed' => 'もう一度パスワード入力してください',
-        ];
-        //validation
-        $validation = Validator::make($inputs, $rules, $messages);
+        $user = $request->session()->get('user');
+        if (!empty($user)){
+            $inputs = $request->all();
+            //rules
+            $rules = [
+                'name'=>'required',
+                'email'=>'required|email',
+                'password'=>'required|confirmed',
+                'password_confirmation' => 'required',
+            ];
+            //message
+            $messages = [
+                'name.required' => '名前は必須です',
+                'email.required' => 'emailは必須です',
+                'password.required' => 'パスワードは必須です',
+                'password.confirmed' => 'もう一度パスワード入力してください',
+            ];
+            //validation
+            $validation = Validator::make($inputs, $rules, $messages);
 
-        //if fails
-        if($validation->fails()){
-            return redirect()->back()->withErrors($validation->errors())->withInput();
+            //if fails
+            if($validation->fails()){
+                return redirect()->back()->withErrors($validation->errors())->withInput();
+            }else{
+                Students::create($request->all());
+                return view('signup');
+            }
         }else{
-            Students::create($request->all());
-            return view('Top');
+            return $this->index();
         }
     }
 
     public function signin (Request $request) 
     {
-        $inputs = $request->all();
-        //rules
-        $rules = [
-            'email'=>'required|email',
-            'password'=>'required',
-        ];
-        //message
-        $messages = [
-            'email.required' => 'emailは必須です',
-            'password.required' => 'パスワードは必須です',
-        ];
-        //validation
-        $validation = Validator::make($inputs, $rules, $messages);
-        //if fails
-        if($validation->fails()){
-            return redirect()->back()->withErrors($validation->errors())->withInput();
-        }else{
-            $email = $request->input('email');
-            $pass = $request->input('password');
-            $auth = Students::where('email', '=', $email)->first();
-    
+        
+            $inputs = $request->all();
+            //rules
+            $rules = [
+                'email'=>'required|email',
+                'password'=>'required',
+            ];
+            //message
+            $messages = [
+                'email.required' => 'emailは必須です',
+                'password.required' => 'パスワードは必須です',
+            ];
+            //validation
+            $validation = Validator::make($inputs, $rules, $messages);
             //if fails
-    
-            if($pass == $auth['password']){
-                return $this->ses_put($request, $auth->id);
+            if($validation->fails()){
+                return redirect()->back()->withErrors($validation->errors())->withInput();
             }else{
-                $error = 'パスワードが正しくありません';
-                return view('signin', compact('error'));
+                $email = $request->input('email');
+                $pass = $request->input('password');
+                $auth = Students::where('email', '=', $email)->first();
+        
+                //if fails
+        
+                if($pass == $auth['password']){
+                    return $this->ses_put($request, $auth->id);
+                }else{
+                    $error = 'パスワードが正しくありません';
+                    return view('signin', compact('error'));
+                }
             }
-        }
+        
     }
 
     public function ses_put (Request $request, $id) {
@@ -140,46 +147,52 @@ class StudentsController extends Controller
 
     public function change_password (Request $request) {
         $user = $request->session()->get('user');
-        $before_password = $request->input('before_password');
-        $after_password = $request->input('after_password');
+        if (!empty($user)){
+            // $user = $request->session()->get('user');
+            $before_password = $request->input('before_password');
+            $after_password = $request->input('after_password');
 
-        $inputs = $request->all();
+            $inputs = $request->all();
 
-        $rules = [
-            'before_password'=>'required',
-            'after_password' => 'required',
-        ];
-        //message
-        $messages = [
-            'before_password.required' => '現在のパスワードを入力してください',
-            'after_password.required' => '新しいパスワードを入力してください',
-        ];
-        //validation
-        $validation = Validator::make($inputs, $rules, $messages);
-        if($validation->fails()){
-            return redirect()->back()->withErrors($validation->errors())->withInput();
-        }else{
-            //生徒の情報を取得
-            $student = Students::select('id', 'password')
-            ->where('id', '=', $user)
-            ->first();
-
-            if($student['password'] == $before_password){
-                Students::where('id', '=', $user)
-                ->update(['password' => $after_password]);
-                $success = 'パスワードの変更が完了しました';
-                return view('option', compact('success'));
+            $rules = [
+                'before_password'=>'required',
+                'after_password' => 'required',
+            ];
+            //message
+            $messages = [
+                'before_password.required' => '現在のパスワードを入力してください',
+                'after_password.required' => '新しいパスワードを入力してください',
+            ];
+            //validation
+            $validation = Validator::make($inputs, $rules, $messages);
+            if($validation->fails()){
+                return redirect()->back()->withErrors($validation->errors())->withInput();
             }else{
-                $error = 'パスワードが正しくありません';
-                return view('option', compact('error'));
+                //生徒の情報を取得
+                $student = Students::select('id', 'name', 'email', 'password')
+                ->where('id', '=', $user)
+                ->first();
+
+                if($student['password'] == $before_password){
+                    Students::where('id', '=', $user)
+                    ->update(['password' => $after_password]);
+                    $success = 'パスワードの変更が完了しました';
+                    return view('option', compact('success', 'student'));
+                }else{
+                    $error = 'パスワードが正しくありません';
+                    return view('option', compact('error'));
+                }
             }
+        }else{
+            return $this->index();
         }
 
         
     }
 
     public function ses_del (Request $request) {
-        $request->session()->forget('user');
+        // $request->session()->forget('user');
+        $request->session()->flush();
         return $this->index();
     }
 }
