@@ -31,13 +31,14 @@
         <tr id = 'form'>
             <form id='edit' method='post' action="/admin/users/{{$student['id']}}/edit">
             <td>{{ $student['id'] }}</td>
-            <td><input type="text" class="text" name="email" value="{{ $student['name'] }}"></td>
+            <td><input type="text" class="text" name="name" value="{{ $student['name'] }}"></td>
             <td><input type="email" class="text" name="email" value="{{ $student['email'] }}"></td>
-            <td><input type="text" class="text" name="email" value="{{ $student['ent_date'] }}"></td>
+            <td><input type="text" class="text" name="ent_date" value="{{ $student['ent_date'] }}"></td>
             <td>{{ $student['created_at'] }}</td>
             <td>{{ $student['updated_at'] }}</td>
+            <td><button id='cancel'>戻る</button><input type='submit' value='更新'></td>
+            @csrf 
             </form>
-            <td><button id='cancel'>戻る</button></td>
         </tr>
     </table>
     <table class=table>

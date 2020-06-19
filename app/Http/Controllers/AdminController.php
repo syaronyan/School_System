@@ -108,4 +108,22 @@ class AdminController extends Controller
             return $this->index();
         }   
     }
+    public function edit (Request $request, $id) 
+    {
+        $user = $request->session()->get('user');
+        if ($user == 1){
+            Students::where('id', '=', $id)
+            ->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'ent_date' => $request->ent_date
+            ]);
+            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at')
+            ->where('id', '=', $id)
+            ->first();
+            return view('admin/student_progress', compact('student'));
+        }else{
+            return $this->index();
+        }   
+    }
 }

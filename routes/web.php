@@ -40,3 +40,4 @@ Route::get('/admin/students', 'AdminController@students');
 Route::get('/admin/add', 'AdminController@add');
 Route::post('/admin/signup', 'AdminController@signup');
 Route::get('/admin/users/{id}', 'AdminController@user');
+Route::post('/admin/users/{id}/edit', 'AdminController@edit');
