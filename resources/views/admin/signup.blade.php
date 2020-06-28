@@ -7,7 +7,7 @@
 
 <!-- 内容 -->
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>このページでは生徒のアカウント登録ができます。</p>
     <div class='background_wrapper'>
     <div class='contents'>
     <div class="login">
@@ -26,6 +26,7 @@
             @endif
             <input type="password" class="text" name="password" placeholder="password">
             <input type="password" class="text" name="password_confirmation" placeholder="password">
+            <input type="datetime" class="text" name="ent_date" placeholder="入校日2020/04/04">
             <input type="hidden" name="status" value="1">
             <button class="signin">
                 Sign Up

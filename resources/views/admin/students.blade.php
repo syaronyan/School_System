@@ -8,7 +8,7 @@
 
 <!-- 内容 -->
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>このページでは、生徒情報が確認できます。</p>
     <div></div>
     <table class=table>
         <tr>
