@@ -14,6 +14,9 @@
                         </ul> -->
                     </li>
                 </div>
+                <div class='explain'>
+                    <img src='https://user-images.githubusercontent.com/49708888/75330366-51f3fc00-58c4-11ea-829f-5d5d484966ef.jpg'>
+                </div>
             </ul>
         </div> 
     </div>

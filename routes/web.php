@@ -21,7 +21,6 @@ Route::get('/Top', 'StundentController@Top');
 Route::get('/option', 'StundentController@option');
 Route::get('/document', 'StundentController@document');
 Route::get('/signup', 'StundentController@signup');
-// Route::get('/signin', 'StundentController@signin');
 // Route::get('/work/{id}', 'StundentController@work');
 
 Route::get('/work/{id}', 'GroupController@subject');
