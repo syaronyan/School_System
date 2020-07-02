@@ -17,7 +17,7 @@ class AdminController extends Controller
     public function admin (Request $request) 
     {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             return view('admin');
         }else{
             return $this->index();
@@ -26,7 +26,7 @@ class AdminController extends Controller
     public function students (Request $request) 
     {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             // $ids = [];
             // $names = [];
             // $emails = [];
@@ -62,7 +62,7 @@ class AdminController extends Controller
 
     public function add (Request $request) {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             return view('admin/signup');
         }else{
             return $this->index();
@@ -99,7 +99,7 @@ class AdminController extends Controller
     public function user (Request $request,$id) 
     {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at')
             ->where('id', '=', $id)
             ->first();
@@ -111,7 +111,7 @@ class AdminController extends Controller
     public function edit (Request $request, $id) 
     {
         $user = $request->session()->get('user');
-        if ($user == 1){
+        if ($user == 1 || $user == 2 || $user == 3){
             Students::where('id', '=', $id)
             ->update([
                 'name' => $request->name,
