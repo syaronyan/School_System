@@ -144,7 +144,8 @@ class StudentsController extends Controller
         // header( "Location: https://learning.techis.jp/mypage" ) ;
         // exit;
     }   else{
-            return $this->index();
+            header( "Location: https://learning.techis.jp" ) ;
+            exit ;
     }
     }
 
