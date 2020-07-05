@@ -7,7 +7,7 @@
                 <p class='sm_section'>てはじめに１ <img src="{{ asset('storage/Required.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
-                        paizaラーニング「PHP入門編」を実施してください。
+                        phpで「Hello TECH I.S.」と表示させてください。
                     </li>
                 </div>
             </ul>

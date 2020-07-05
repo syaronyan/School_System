@@ -55,7 +55,6 @@ class StudentsController extends Controller
 
     public function signin (Request $request) 
     {
-        
             $inputs = $request->all();
             //rules
             $rules = [
@@ -130,7 +129,7 @@ class StudentsController extends Controller
             }
 
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email')
+            $student = Students::select('id', 'name', 'email', 'created_at', 'status')
             ->where('id', '=', $user)
             ->first();
 
@@ -138,10 +137,15 @@ class StudentsController extends Controller
             // exit;
 
             //進捗管理と生徒の情報を持ってmypageに遷移
-            return view('mypage', compact('progress_tasks_edit', 'student'));
+            if($student->status == 1){
+                return view('mypage', compact('progress_tasks_edit', 'student'));
+            }
         // return view('mypage');
+        // header( "Location: https://learning.techis.jp/mypage" ) ;
+        // exit;
     }   else{
-            return $this->index();
+            header( "Location: https://learning.techis.jp" ) ;
+            exit ;
     }
     }
 
@@ -193,6 +197,7 @@ class StudentsController extends Controller
     public function ses_del (Request $request) {
         // $request->session()->forget('user');
         $request->session()->flush();
-        return $this->index();
+        header( "Location: https://learning.techis.jp" ) ;
+        exit ;
     }
 }
