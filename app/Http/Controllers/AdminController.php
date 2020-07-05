@@ -100,7 +100,7 @@ class AdminController extends Controller
     {
         $user = $request->session()->get('user');
         if ($user == 1 || $user == 2 || $user == 3){
-            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at')
+            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)
             ->first();
             return view('admin/student_progress', compact('student'));
@@ -118,12 +118,30 @@ class AdminController extends Controller
                 'email' => $request->email,
                 'ent_date' => $request->ent_date
             ]);
-            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at')
+            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)
             ->first();
             return view('admin/student_progress', compact('student'));
         }else{
             return $this->index();
         }   
+    }
+
+    public function graduate (Request $request) {
+        $student_id = $request->student_id;
+        $check_flag = $request->check_flag;
+
+        if ($check_flag == 1){
+            Students::where('id', '=', $student_id)
+            ->update([
+                'status' => 1
+                ]);
+        }
+        elseif ($check_flag == 0) {
+            Students::where('id', '=', $student_id)
+            ->update([
+                'status' => 0
+            ]);
+        }
     }
 }
