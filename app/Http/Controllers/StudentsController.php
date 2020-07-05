@@ -139,13 +139,15 @@ class StudentsController extends Controller
             //進捗管理と生徒の情報を持ってmypageに遷移
             if($student->status == 1){
                 return view('mypage', compact('progress_tasks_edit', 'student'));
+            }else{
+                header( "Location: https://learning.techis.jp" ) ;
+                exit ;
             }
         // return view('mypage');
         // header( "Location: https://learning.techis.jp/mypage" ) ;
         // exit;
-    }   else{
-            header( "Location: https://learning.techis.jp" ) ;
-            exit ;
+        }else{
+            return $this->index();
     }
     }
 
