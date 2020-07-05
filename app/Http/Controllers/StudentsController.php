@@ -129,7 +129,7 @@ class StudentsController extends Controller
             }
 
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at')
+            $student = Students::select('id', 'name', 'email', 'created_at', 'status')
             ->where('id', '=', $user)
             ->first();
 
@@ -137,7 +137,9 @@ class StudentsController extends Controller
             // exit;
 
             //進捗管理と生徒の情報を持ってmypageに遷移
-            return view('mypage', compact('progress_tasks_edit', 'student'));
+            if($student->status == 1){
+                return view('mypage', compact('progress_tasks_edit', 'student'));
+            }
         // return view('mypage');
         // header( "Location: https://learning.techis.jp/mypage" ) ;
         // exit;
