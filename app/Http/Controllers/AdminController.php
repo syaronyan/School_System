@@ -116,7 +116,8 @@ class AdminController extends Controller
             ->update([
                 'name' => $request->name,
                 'email' => $request->email,
-                'ent_date' => $request->ent_date
+                'ent_date' => $request->ent_date,
+                'course' => $request->course
             ]);
             $student = Students::select('id', 'name', 'email', 'ent_date','course', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)

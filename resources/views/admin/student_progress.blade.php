@@ -53,7 +53,7 @@
             <td><input type="text" class="text" name="name" value="{{ $student['name'] }}"></td>
             <td><input type="email" class="text" name="email" value="{{ $student['email'] }}"></td>
             <td><input type="text" class="text" name="ent_date" value="{{ $student['ent_date'] }}"></td>
-            <td>{{ $student['course'] }}</td>
+            <td><input type="text" class="text" name="course" value="{{ $student['course'] }}"></td>
             <td>{{ $student['created_at'] }}</td>
             <td>{{ $student['updated_at'] }}</td>
             

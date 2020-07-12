@@ -34,6 +34,14 @@
             @endif
             <input type="password" class="text" name="password" placeholder="password">
             <input type="password" class="text" name="password_confirmation" placeholder="password">
+            @if ($errors->has('course'))
+            <p class="error_msg">{{ $errors->first('course') }}</p>
+            @endif
+            <input type="radio" name="course" value="0">一般コース
+            <input type="radio" name="course" value="1">データサイエンスコース
+            @if ($errors->has('ent_date'))
+            <p class="error_msg">{{ $errors->first('ent_date') }}</p>
+            @endif
             <input type="datetime" class="text" name="ent_date" placeholder="入校日2020/04/04">
             <input type="hidden" name="status" value="1">
             <!-- <input type="checkbox" id="checkbox-1-1" class="custom-checkbox"> -->
