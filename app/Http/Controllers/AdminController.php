@@ -34,7 +34,7 @@ class AdminController extends Controller
             // $created_ats = [];
             // $updated_ats = [];
             // $student = [];
-            $all_students = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at')
+            $all_students = Students::select('id', 'name', 'email','course', 'ent_date', 'created_at', 'updated_at')
             ->get();
             // foreach ($all_students as $students){
             //     $ent_date = explode(" ", $students['ent_date'])[0]; 
@@ -100,7 +100,7 @@ class AdminController extends Controller
     {
         $user = $request->session()->get('user');
         if ($user == 1 || $user == 2 || $user == 3){
-            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at', 'status')
+            $student = Students::select('id', 'name', 'email', 'ent_date','course', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)
             ->first();
             return view('admin/student_progress', compact('student'));
@@ -118,7 +118,7 @@ class AdminController extends Controller
                 'email' => $request->email,
                 'ent_date' => $request->ent_date
             ]);
-            $student = Students::select('id', 'name', 'email', 'ent_date', 'created_at', 'updated_at', 'status')
+            $student = Students::select('id', 'name', 'email', 'ent_date','course', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)
             ->first();
             return view('admin/student_progress', compact('student'));

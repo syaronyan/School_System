@@ -1,6 +1,10 @@
 <!-- adminlte::pageを継承 -->
 @extends('adminlte::page')
  
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
 <!-- 見出し -->
 @section('content_header')
     <h1>{{ $student['name'] }}さんの進捗状況</h1>
@@ -9,13 +13,14 @@
 <!-- 内容 -->
 @section('content')
     <p>このページでは、生徒の進歩状況が確認できます。</p>
-    <div></div>
+    
     <table class=table>
         <tr>
             <td>id</td>
             <td>名前</td>
             <td>メールアドレス</td>
             <td>入校日</td>
+            <td>コース</td>
             <td>登録日</td>
             <td>更新日</td>
             <td id='exist'>在籍</td>
@@ -25,6 +30,7 @@
             <td>{{ $student['name'] }}</td>
             <td>{{ $student['email'] }}</td>
             <td>{{ $student['ent_date'] }}</td>
+            <td>{{ $student['course'] }}</td>
             <td>{{ $student['created_at'] }}</td>
             <td>{{ $student['updated_at'] }}</td>
             <td>
@@ -47,6 +53,7 @@
             <td><input type="text" class="text" name="name" value="{{ $student['name'] }}"></td>
             <td><input type="email" class="text" name="email" value="{{ $student['email'] }}"></td>
             <td><input type="text" class="text" name="ent_date" value="{{ $student['ent_date'] }}"></td>
+            <td>{{ $student['course'] }}</td>
             <td>{{ $student['created_at'] }}</td>
             <td>{{ $student['updated_at'] }}</td>
             
@@ -61,8 +68,8 @@
             <td>進歩</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td class="container" style="width:50%"><canvas id="salesCanvas"></canvas></td>
+            <td class="container" style="width:50%"><canvas id="goalsCanvas"></canvas></td>
         </tr>
     </table>
     
@@ -131,5 +138,61 @@ $(function() {
             }
         }).trigger('change');
     });
+
+
+    window.onload = function() {
+        salesChart = document.getElementById("salesCanvas").getContext("2d");
+        goalsChart = document.getElementById("goalsCanvas").getContext("2d");
+        window.myBar1 = new Chart(salesChart, {
+            type: 'bar', // ここは bar にする必要があります
+            data: salesChartData
+        });
+        window.myBar2 = new Chart(goalsChart, {
+            type: 'bar', // ここは bar にする必要があります
+            data: goalsChartData
+        });
+    };
+
+
+    var salesChartData = {
+        labels: ['1月','2月','3月','4月','5月','6月'
+        ],
+        datasets: [
+        {
+            type: 'line',
+            label: '販売数',
+            data: ['132403','137500','260000','125000','127500','121000'
+            ],
+            borderColor : "#4b57da",
+            backgroundColor : "#4b57da",
+            fill: false
+        },
+        {
+            type: 'bar',
+            label: '見込み',
+            data: ['132403','125000','150000','123600','125000','228500'
+            ],
+            borderColor : "#b0da4c",
+            backgroundColor : "#b0da4c",
+        }
+        ]
+    };
+ 
+    // 達成率データログ
+    var goalsChartData = {
+        labels: ['1月','2月','3月','4月','5月','6月'
+        ],
+        datasets: [
+        {
+            type: 'line',
+            label: '達成率',
+            data: ['84.0','94.5','120.6','120.6','80.3','70.1'
+            ],
+            borderColor : "#c38bda",
+            backgroundColor : "#c38bda",
+            fill: false
+        }
+        ]
+    };
 </script>
 @stop

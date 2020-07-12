@@ -16,6 +16,7 @@
             <td>名前</td>
             <td>メールアドレス</td>
             <td>入校日</td>
+            <td>コース</td>
             <td>登録日</td>
             <td>更新日</td>
         </tr>
@@ -25,6 +26,7 @@
             <td>{{ $students['name'] }}</td>
             <td>{{ $students['email'] }}</td>
             <td>{{ $students['ent_date'] }}</td>
+            <td>{{ $students['course'] }}</td>
             <td>{{ $students['created_at'] }}</td>
             <td>{{ $students['updated_at'] }}</td>
         </tr>
