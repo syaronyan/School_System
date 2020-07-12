@@ -30,6 +30,8 @@ class StudentsController extends Controller
                 'email'=>'required|email',
                 'password'=>'required|confirmed',
                 'password_confirmation' => 'required',
+                'course'=>'required',
+                'ent_date'=>'required',
             ];
             //message
             $messages = [
@@ -37,10 +39,11 @@ class StudentsController extends Controller
                 'email.required' => 'emailは必須です',
                 'password.required' => 'パスワードは必須です',
                 'password.confirmed' => 'もう一度パスワード入力してください',
+                'course.required' => 'コースを選択してください',
+                'ent_date.required' => '入校日を入力してください',
             ];
             //validation
             $validation = Validator::make($inputs, $rules, $messages);
-
             //if fails
             if($validation->fails()){
                 return redirect()->back()->withErrors($validation->errors())->withInput();
@@ -129,7 +132,7 @@ class StudentsController extends Controller
             }
 
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at', 'status')
+            $student = Students::select('id', 'name', 'email','course', 'created_at', 'status')
             ->where('id', '=', $user)
             ->first();
 
@@ -138,7 +141,11 @@ class StudentsController extends Controller
 
             //進捗管理と生徒の情報を持ってmypageに遷移
             if($student->status == 1){
-                return view('mypage', compact('progress_tasks_edit', 'student'));
+                if($student->course == 0){
+                    return view('mypage', compact('progress_tasks_edit', 'student'));
+                }elseif($student->course == 1){
+                    return view('data-science', compact('progress_tasks_edit', 'student'));
+                }
             }else{
                 header( "Location: https://learning.techis.jp" ) ;
                 exit ;

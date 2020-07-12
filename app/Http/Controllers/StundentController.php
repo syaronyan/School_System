@@ -79,7 +79,7 @@ class StundentController extends Controller
             }
 
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at')
+            $student = Students::select('id', 'name', 'email','course', 'created_at')
             ->where('id', '=', $user)
             ->first();
 
@@ -89,7 +89,12 @@ class StundentController extends Controller
             // exit;
 
             //進捗管理と生徒の情報を持ってmypageに遷移
-            return view('mypage', compact('progress_tasks_edit', 'student'));
+            // return view('mypage', compact('progress_tasks_edit', 'student'));
+            if($student->course == 0){
+                return view('mypage', compact('progress_tasks_edit', 'student'));
+            }elseif($student->course == 1){
+                return view('data-science', compact('progress_tasks_edit', 'student'));
+            }
         }else{
             return $this->index();
         }
