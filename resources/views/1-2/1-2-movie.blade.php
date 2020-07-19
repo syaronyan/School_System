@@ -254,6 +254,7 @@
                     例：動画で説明のあった二次元配列を実際に書いてみて、print_rで表示してみよう。
                     </li>
 	　　            <p class='attention'>（chrome表示後、右クリック→ページのソースを表示　で配列の構成は見やすくなります）</p>
+                    <p class='attention'>※動画（1分3秒以降の二次元配列のコード）では「,」が見切れてしまっておりますが、二次元配列は以下のように配列と配列の間に「,」を付けるように記載してください。<br>array(<br>array(),<br>array(),<br>array(),<br>array()<br>);<br></p>
                 </div>
             </ul>
             <ul id='14' class='lg_work'>
@@ -295,7 +296,7 @@
                     <li class='sm_work'>
                     スーパーグローバル変数の１つの以下を実行して内容を確認してみよう
                     </li>
-	　　            <p class='attention'>print($_SERVER);</p>
+	　　            <p class='attention'>print_r($_SERVER);</p>
                     <li class='comment'>
                     値の説明：<a href='https://www.php.net/manual/ja/reserved.variables.server.php'>https://www.php.net/manual/ja/reserved.variables.server.php</a>
                     </li>    

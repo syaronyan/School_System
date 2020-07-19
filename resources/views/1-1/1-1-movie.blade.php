@@ -97,6 +97,11 @@
                 <b>画像を表示しよう</b>
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/portfolio/portfolio_06.mp4') }}" width="960" height="540" controls></video>
+                    <p class='sm_section'>演習[1]</p>
+                    <li class='sm_work'>
+                    下記ファイルをダウンロードして画像を表示させてください
+                    </li>
+                    <p class='attention'><a href="{{ asset('storage/portfolio_sample.zip') }}" download="portfolio_sample.zip">portfolio_sample.zip</a></p>
                 </div>
             </ul>
             <ul id='07' class='lg_work'>

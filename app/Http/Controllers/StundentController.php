@@ -25,10 +25,15 @@ class StundentController extends Controller
             $groups = Group::select('id', 'name', 'tools', 'img_link')
             ->get();
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at')
+            $student = Students::select('id', 'name', 'email','course', 'created_at')
             ->where('id', '=', $user)
             ->first();
-            return view('Top', compact('groups', 'student'));
+            // return view('Top', compact('groups', 'student'));
+            if($student->course == 0){
+                return view('Top', compact('groups', 'student'));
+            }elseif($student->course == 1){
+                return view('data-science-work', compact('groups', 'student'));
+            }
         }else{
             return $this->index();
         }
