@@ -26,8 +26,8 @@ $today = new DateTime();
             </div>
             <nav>
                 <ul>
-                    <li><a href="/mypage">一般コース</a></li>
-                    <li><a href="#">データサイエンスコース</a></li>
+                    <li><a href="/mypage">マイページ</a></li>
+                    <!-- <li><a href="#">データサイエンスコース</a></li> -->
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="/option">パスワード変更</a></li>
                     <li><a href="/document">参考資料</a></li>

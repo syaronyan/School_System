@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Students;
+use App\Tasks;
+use App\Progress;
 use Validator;
 
 class AdminController extends Controller
@@ -103,7 +106,40 @@ class AdminController extends Controller
             $student = Students::select('id', 'name', 'email', 'ent_date','course', 'created_at', 'updated_at', 'status')
             ->where('id', '=', $id)
             ->first();
-            return view('admin/student_progress', compact('student'));
+
+            $group_ids = [];
+            $group_names = [];
+            $parcents = [];
+            $progress_tasks_edit = [];
+            $student_id = $request->student_id;
+            
+            //サブクエリ
+            $sub = Progress::select('tasks_id', 'check_flag')
+            ->where('student_id', '=', ':student_id')
+            ->where('check_flag', '=', ':check_flag')
+            ->toSql();
+
+            //進捗管理のデータ取得
+            $progress_tasks = Tasks::select(DB::raw('group_id, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count'))
+            ->join('group', 'group.id', '=', 'tasks.group_id')
+            ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
+            ->groupBy('tasks.group_id')
+            ->setBindings([':student_id'=>$id, ':check_flag'=>'1'])
+            ->get();
+
+            //上記データを編集
+            foreach ($progress_tasks as $progress_task){
+                array_push($group_ids, $progress_task['group_id']);
+                array_push($group_names, $progress_task['group_name']);
+                $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
+                array_push($parcents, $parsent);
+
+                $progress_tasks_edit['group_ids'] = $group_ids;
+                $progress_tasks_edit['group_names'] = $group_names;
+                $progress_tasks_edit['parcents'] = $parcents;
+            }
+
+            return view('admin/student_progress', compact('student', 'progress_tasks_edit'));
         }else{
             return $this->index();
         }   

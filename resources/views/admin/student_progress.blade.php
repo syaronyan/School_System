@@ -141,6 +141,10 @@ $(function() {
 
 
     window.onload = function() {
+        var progressName = [];
+        var progressVal = [];
+        getprogressName();
+        getprogress();
         salesChart = document.getElementById("salesCanvas").getContext("2d");
         goalsChart = document.getElementById("goalsCanvas").getContext("2d");
         window.myBar1 = new Chart(salesChart, {
@@ -153,6 +157,29 @@ $(function() {
         });
     };
 
+    function getprogressName() {
+        progressName = []; // 配列を初期化
+        // var length = 12;
+        <?php
+            foreach($progress_tasks_edit['group_names'] as $progress){?>
+                progressName.push('<?php echo $progress;?>');
+        <?php
+            }
+        ?>
+
+    }
+
+    function getprogress() {
+        progressVal = []; // 配列を初期化
+        // var length = 12;
+        <?php
+            foreach($progress_tasks_edit['parcents'] as $progress){?>
+                progressVal.push('<?php echo $progress;?>');
+        <?php
+            }
+        ?>
+
+    }
 
     var salesChartData = {
         labels: ['1月','2月','3月','4月','5月','6月'
@@ -180,17 +207,17 @@ $(function() {
  
     // 達成率データログ
     var goalsChartData = {
-        labels: ['1月','2月','3月','4月','5月','6月'
+        labels: ['HTML','PHP','JS','Design','Python','laravel '
         ],
         datasets: [
         {
-            type: 'line',
+            type: 'bar',
             label: '達成率',
-            data: ['84.0','94.5','120.6','120.6','80.3','70.1'
+            data: ['100','100','100','100','30','0'
             ],
             borderColor : "#c38bda",
             backgroundColor : "#c38bda",
-            fill: false
+            // fill: false
         }
         ]
     };
