@@ -52,6 +52,12 @@ class GroupController extends Controller
                     }else{
                         return $this->index();
                     }
+                }elseif($student->course == 2){
+                    if($id == 5 || $id == 6 || $id == 14 || $id == 15  || $id == 16  || $id == 17 || $id == 19){
+                        return $this->index();
+                    }else{
+                        return view('work', compact('student','group','tasks'));
+                    }
                 }
                 // return view('work', compact('student','group','tasks'));
             }else{

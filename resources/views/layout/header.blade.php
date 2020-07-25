@@ -29,7 +29,7 @@ $today = new DateTime();
                     <li><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="/option">パスワード変更</a></li>
-                    <li><a href="/document">参考資料</a></li>
+                    <!-- <li><a href="/document">参考資料</a></li> -->
                     <!-- <li><a href="#"></a></li> -->
                 </ul>
             </nav>
@@ -47,7 +47,7 @@ $today = new DateTime();
 </html>
 <script>
 $(document).ready(function(){
-    $('#user_name').text('<?php echo $student['name'];?>でログインしています');
+    $('#user_name').text('<?php echo $student['course'];?>でログインしています');
 });
 $(document).ready(function(){
     <?php $startdate = new DateTime($student['created_at']);

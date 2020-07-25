@@ -37,8 +37,9 @@
             @if ($errors->has('course'))
             <p class="error_msg">{{ $errors->first('course') }}</p>
             @endif
-            <input type="radio" name="course" value="0">一般コース
-            <input type="radio" name="course" value="1">データサイエンスコース
+            <input type="radio" name="course" value="0">PROエンジニア育成コース<br>
+            <input type="radio" name="course" value="1">データサイエンティスト育成コース<br>
+            <input type="radio" name="course" value="2">PROエンジニア+データサイエンティスト育成コース
             @if ($errors->has('ent_date'))
             <p class="error_msg">{{ $errors->first('ent_date') }}</p>
             @endif

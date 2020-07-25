@@ -40,6 +40,11 @@ class StundentController extends Controller
                 ->where('status', '=', 2)
                 ->get();
                 return view('data-science-work', compact('groups', 'student'));
+            }elseif($student->course == 2){
+                $groups = Group::select('id', 'name', 'tools', 'img_link')
+                ->whereNotIn('id', [5, 6, 14, 15, 16, 17, 19])
+                ->get();
+                return view('PRO_science_work', compact('groups', 'student'));
             }
         }else{
             return $this->index();
@@ -121,7 +126,7 @@ class StundentController extends Controller
             $groups = Group::select('id', 'name', 'tools', 'img_link')
             ->get();
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at')
+            $student = Students::select('id', 'name', 'email','course', 'created_at')
             ->where('id', '=', $user)
             ->first();
             return view('option', compact('student'));
@@ -136,10 +141,14 @@ class StundentController extends Controller
         $user = $request->session()->get('user');
         if (!empty($user)){
             //生徒の情報を取得
-            $student = Students::select('id', 'name', 'email', 'created_at')
+            $student = Students::select('id', 'name', 'email','course', 'created_at')
             ->where('id', '=', $user)
             ->first();
+            if($student->course == 0){
             return view('document', compact('student'));
+            }else{
+                return $this->index();
+            }
         }else{
             return $this->index();
         }

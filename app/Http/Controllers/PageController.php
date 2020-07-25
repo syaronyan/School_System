@@ -29,6 +29,12 @@ class PageController extends Controller
                     return view('1-'.$id.'/'.$page, compact('student'));
                 }elseif($student->course == 1){
                     return view('2-'.$id.'/'.$page, compact('student'));
+                }elseif($student->course == 2){
+                    if($id<14){
+                        return view('1-'.$id.'/'.$page, compact('student'));
+                    }elseif($id>17){
+                        return view('2-'.$id.'/'.$page, compact('student'));
+                    }
                 }
                 // return view('1-'.$id.'/'.$page, compact('student'));
             }else{
