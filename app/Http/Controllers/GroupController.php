@@ -36,11 +36,24 @@ class GroupController extends Controller
                 ->where('group_id', '=', $id)
                 ->get();
                 //生徒の情報を取得
-                $student = Students::select('id', 'name', 'email', 'created_at')
+                $student = Students::select('id', 'name', 'email','course', 'created_at')
                 ->where('id', '=', $user)
-                ->get();
+                ->first();
                 //課題と生徒の情報を持ってworkに遷移
-                return view('work', compact('student','group','tasks'));
+                if($student->course == 0){
+                    if($group->status == 1){
+                        return view('work', compact('student','group','tasks'));
+                    }else{
+                        return $this->index();
+                    }
+                }elseif($student->course == 1){
+                    if($group->status == 2){
+                        return view('work', compact('student','group','tasks'));
+                    }else{
+                        return $this->index();
+                    }
+                }
+                // return view('work', compact('student','group','tasks'));
             }else{
                 return $this->index();
             }

@@ -22,10 +22,15 @@ class PageController extends Controller
             $user = $request->session()->get('user');
             if (!empty($user)){
                 //生徒の情報を取得
-                $student = Students::select('id', 'name', 'email', 'created_at')
+                $student = Students::select('id', 'name', 'email','course', 'created_at')
                 ->where('id', '=', $user)
                 ->first();
-                return view('1-'.$id.'/'.$page, compact('student'));
+                if($student->course == 0){
+                    return view('1-'.$id.'/'.$page, compact('student'));
+                }elseif($student->course == 1){
+                    return view('2-'.$id.'/'.$page, compact('student'));
+                }
+                // return view('1-'.$id.'/'.$page, compact('student'));
             }else{
                 return $this->index();
         }

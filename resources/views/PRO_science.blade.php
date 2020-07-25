@@ -2,7 +2,22 @@
 @section('content')
     <div class='section'>[STEP1]基礎課題</div>
         <div class='progress_tasks'>
-            @for($i=17; $i < 22; $i++)
+            @for($i=1; $i < 5; $i++)
+                <div class='progress_img'>
+                    <div>
+                        <a href="/work/{{ $progress_tasks_edit['group_ids'][$i] }}">
+                            <img src="{{ asset('storage/') }}/{{ $progress_tasks_edit['group_imgs'][$i] }}" width="200" height="200">
+                        </a>
+                    </div>
+                    <div>
+                        <progress value="{{ $progress_tasks_edit['parcents'][$i] }}" max="100"></progress>
+                    </div>
+                    <div>
+                        {{ $progress_tasks_edit['parcents'][$i] }}%
+                    </div>
+                </div>
+            @endfor
+            @for($i=7; $i < ; $i++)
                 <div class='progress_img'>
                     <div>
                         <a href="/work/{{ $progress_tasks_edit['group_ids'][$i] }}">

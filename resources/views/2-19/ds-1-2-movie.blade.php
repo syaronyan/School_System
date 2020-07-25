@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'><a class='back' href="/work/4">⬅︎</a>　TECH I.S. 動画教材「ポートフォリオを作ろう」</div>
+    <div class='section'><a class='back' href="/work/19">⬅︎</a>　TECH I.S. 動画教材「ポートフォリオを作ろう」</div>
         <div class='ul-align-center'>
         <div class='bottom_btn'>
             <button type="button" id='Speed_2'>2倍速</button>

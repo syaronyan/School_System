@@ -22,16 +22,23 @@ class StundentController extends Controller
     {
         $user = $request->session()->get('user');
         if (!empty($user)){
-            $groups = Group::select('id', 'name', 'tools', 'img_link')
-            ->get();
+            // $groups = Group::select('id', 'name', 'tools', 'img_link')
+            // ->where('status', '=', 1)
+            // ->get();
             //生徒の情報を取得
             $student = Students::select('id', 'name', 'email','course', 'created_at')
             ->where('id', '=', $user)
             ->first();
             // return view('Top', compact('groups', 'student'));
             if($student->course == 0){
+                $groups = Group::select('id', 'name', 'tools', 'img_link')
+                ->where('status', '=', 1)
+                ->get();
                 return view('Top', compact('groups', 'student'));
             }elseif($student->course == 1){
+                $groups = Group::select('id', 'name', 'tools', 'img_link')
+                ->where('status', '=', 2)
+                ->get();
                 return view('data-science-work', compact('groups', 'student'));
             }
         }else{
@@ -90,7 +97,7 @@ class StundentController extends Controller
 
             // $groups = Group::select('id', 'name', 'tools', 'img_link')
             // ->get();
-            // var_dump($student);
+            // print_r($progress_tasks_edit);
             // exit;
 
             //進捗管理と生徒の情報を持ってmypageに遷移
@@ -99,6 +106,8 @@ class StundentController extends Controller
                 return view('mypage', compact('progress_tasks_edit', 'student'));
             }elseif($student->course == 1){
                 return view('data-science', compact('progress_tasks_edit', 'student'));
+            }elseif($student->course == 2){
+                return view('PRO_science', compact('progress_tasks_edit', 'student'));
             }
         }else{
             return $this->index();

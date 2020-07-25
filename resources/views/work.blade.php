@@ -25,12 +25,12 @@
     </table>
     @csrf
 </form>
-@foreach ($student as $student)
+
 <?php $student_id = $student->id;
 
 ?>
 <p><?php //echo $student_id?></p>
-@endforeach
+
 <!-- 選択した数値を確認 -->
 <!-- <div class='select'></div> -->
 <script>

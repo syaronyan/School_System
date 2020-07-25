@@ -145,6 +145,8 @@ class StudentsController extends Controller
                     return view('mypage', compact('progress_tasks_edit', 'student'));
                 }elseif($student->course == 1){
                     return view('data-science', compact('progress_tasks_edit', 'student'));
+                }elseif($student->course == 2){
+                    return view('PRO_science', compact('progress_tasks_edit', 'student'));
                 }
             }else{
                 header( "Location: https://learning.techis.jp" ) ;
