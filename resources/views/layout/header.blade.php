@@ -29,7 +29,7 @@ $today = new DateTime();
                     <li><a href="/mypage">マイページ</a></li>
                     <li><a href="/Top">講座一覧</a></li>
                     <li><a href="/option">パスワード変更</a></li>
-                    <!-- <li><a href="/document">参考資料</a></li> -->
+                    <li id='hint'><a href="/document">参考資料</a></li>
                     <!-- <li><a href="#"></a></li> -->
                 </ul>
             </nav>
@@ -40,14 +40,29 @@ $today = new DateTime();
         </div>
         </div>
         <footer id="footer">
-            <p>2020 TECH I.S. All rights reversed</p>
+            <p>2020 TECH I.S. All rights reserved</p>
             <a href='https://techis.jp/privacy/'>プライバシーポリシー</a>
         </footer>
     </body>
 </html>
 <script>
+$(function() {
+	// 初期表示を非表示にする
+	$('#hint').hide();
+    if(<?php echo $student['course'];?> == 0){
+            // 表示する
+            $("#hint").show();
+    }else if(<?php echo $student['course'];?> == 1){
+		// 非表示にする
+        $("#hint").hide();
+    }else if(<?php echo $student['course'];?> == 2){
+		// 非表示にする
+        $("#hint").hide();
+    }
+}); 
+
 $(document).ready(function(){
-    $('#user_name').text('<?php echo $student['course'];?>でログインしています');
+    $('#user_name').text('<?php echo $student['name'];?>でログインしています');
 });
 $(document).ready(function(){
     <?php $startdate = new DateTime($student['created_at']);
@@ -67,7 +82,7 @@ $(function() {
 });
 
 });
-
+    
 $(function() {
     var offset = $('#side-menu').offset();
  

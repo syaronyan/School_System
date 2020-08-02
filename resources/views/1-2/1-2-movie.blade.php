@@ -262,7 +262,7 @@
                 <div class='work_block'>
                     <video class="mv" src="{{ asset('storage/movie/PHP/PHP_14.mp4') }}" width="960" height="540" controls></video>
                 </div>
-                <p class='sm_section'>演習[1]</p>
+                <!-- <p class='sm_section'>演習[1]</p>
                 <div class='work_block'>
                     <li class='sm_work'>
                     以下の組込関数の一覧からどれか４つ選択し、実際に実行してみよう
@@ -278,8 +278,8 @@
                     <b>[日付関係の関数]</b><br> 
                     <a href='https://www.php.net/manual/ja/ref.datetime.php'>https://www.php.net/manual/ja/ref.datetime.php</a><br>
                     </p>
-                </div>
-                <p class='sm_section'>演習[2]</p>
+                </div> -->
+                <p class='sm_section'>演習[1]</p>
                 <div class='work_block'>
                     <li class='sm_work'>
                     消費税を計算する自作関数を作ってみよう。
@@ -297,9 +297,9 @@
                     スーパーグローバル変数の１つの以下を実行して内容を確認してみよう
                     </li>
 	　　            <p class='attention'>print_r($_SERVER);</p>
-                    <li class='comment'>
+                    <!-- <li class='comment'>
                     値の説明：<a href='https://www.php.net/manual/ja/reserved.variables.server.php'>https://www.php.net/manual/ja/reserved.variables.server.php</a>
-                    </li>    
+                    </li>     -->
                 </div>
             </ul>
         </div> 

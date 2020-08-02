@@ -7,11 +7,11 @@
                 <div class='work_block'>
                     <li class='sm_work'>
                         任意の場所に文字を表示させてください。 
-                        <ul>
+                        <!-- <ul>
                             <li class='comment'>
                                 例:<a href='http://www9.plala.or.jp/oyoyon/html/script/inner.html'>http://www9.plala.or.jp/oyoyon/html/script/inner.html</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                 </div>
             </ul>

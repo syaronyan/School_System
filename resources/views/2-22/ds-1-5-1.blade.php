@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'><a class='back' href="/work/22">⬅︎</a>Matplotlib</div>
+    <div class='section'><a class='back' href="/work/22">⬅︎</a>Seaborn & Matplotlib</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>

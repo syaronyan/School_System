@@ -10,7 +10,9 @@ class PageController extends Controller
     //サインイン画面へ遷移
     public function index()
     {
-        return view('signin');
+        // return view('signin');
+        header( "Location: https://learning.techis.jp" ) ;
+        exit ;
     }
     
     public function taskpage (Request $request, $id, $page) 

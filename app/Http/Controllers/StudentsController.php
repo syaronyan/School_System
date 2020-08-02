@@ -16,7 +16,9 @@ class StudentsController extends Controller
     //サインイン画面へ遷移
     public function index()
     {
-        return view('signin');
+        // return view('signin');
+        header( "Location: https://learning.techis.jp" ) ;
+        exit ;
     }
 
     public function signup (Request $request) 
@@ -93,6 +95,11 @@ class StudentsController extends Controller
 
     public function ses_put (Request $request, $id) {
         $request->session()->put('user', $id);
+        // header( "Location: https://learning.techis.jp/mypage" ) ;
+        // exit ;
+    
+
+    // public function ses (Request $request, $id) {
 
         $user = $request->session()->get('user');
         if (!empty($user)){
@@ -144,8 +151,78 @@ class StudentsController extends Controller
                 if($student->course == 0){
                     return view('mypage', compact('progress_tasks_edit', 'student'));
                 }elseif($student->course == 1){
+                    $group_ids = [];
+                    $group_names = [];
+                    $group_imgs = [];
+                    $parcents = [];
+                    $progress_tasks_edit = [];
+                    $student_id = $request->student_id;
+                    
+                    //サブクエリ
+                    $sub = Progress::select('tasks_id', 'check_flag')
+                    ->where('student_id', '=', ':student_id')
+                    ->where('check_flag', '=', ':check_flag')
+                    ->toSql();
+
+                    //進捗管理のデータ取得
+                    $progress_tasks = Tasks::select(DB::raw('group_id, group.img_link as group_img, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count, tasks.status'))
+                    ->join('group', 'group.id', '=', 'tasks.group_id')
+                    ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
+                    ->groupBy('tasks.group_id')
+                    ->setBindings([':student_id'=>$user, ':check_flag'=>'1'])
+                    ->where('tasks.status', '=', 1)
+                    ->get();
+
+                    //上記データを編集
+                    foreach ($progress_tasks as $progress_task){
+                        array_push($group_ids, $progress_task['group_id']);
+                        array_push($group_names, $progress_task['group_name']);
+                        array_push($group_imgs, $progress_task['group_img']);
+                        $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
+                        array_push($parcents, $parsent);
+
+                        $progress_tasks_edit['group_ids'] = $group_ids;
+                        $progress_tasks_edit['group_names'] = $group_names;
+                        $progress_tasks_edit['group_imgs'] = $group_imgs;
+                        $progress_tasks_edit['parcents'] = $parcents;
+                    }
                     return view('data-science', compact('progress_tasks_edit', 'student'));
                 }elseif($student->course == 2){
+                    $group_ids = [];
+                    $group_names = [];
+                    $group_imgs = [];
+                    $parcents = [];
+                    $progress_tasks_edit = [];
+                    $student_id = $request->student_id;
+                    
+                    //サブクエリ
+                    $sub = Progress::select('tasks_id', 'check_flag')
+                    ->where('student_id', '=', ':student_id')
+                    ->where('check_flag', '=', ':check_flag')
+                    ->toSql();
+
+                    //進捗管理のデータ取得
+                    $progress_tasks = Tasks::select(DB::raw('group_id, group.img_link as group_img, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count, tasks.status'))
+                    ->join('group', 'group.id', '=', 'tasks.group_id')
+                    ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
+                    ->groupBy('tasks.group_id')
+                    ->setBindings([':student_id'=>$user, ':check_flag'=>'1'])
+                    ->where('tasks.status', '=', 1)
+                    ->get();
+
+                    //上記データを編集
+                    foreach ($progress_tasks as $progress_task){
+                        array_push($group_ids, $progress_task['group_id']);
+                        array_push($group_names, $progress_task['group_name']);
+                        array_push($group_imgs, $progress_task['group_img']);
+                        $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
+                        array_push($parcents, $parsent);
+
+                        $progress_tasks_edit['group_ids'] = $group_ids;
+                        $progress_tasks_edit['group_names'] = $group_names;
+                        $progress_tasks_edit['group_imgs'] = $group_imgs;
+                        $progress_tasks_edit['parcents'] = $parcents;
+                    }
                     return view('PRO_science', compact('progress_tasks_edit', 'student'));
                 }
             }else{
@@ -184,7 +261,7 @@ class StudentsController extends Controller
                 return redirect()->back()->withErrors($validation->errors())->withInput();
             }else{
                 //生徒の情報を取得
-                $student = Students::select('id', 'name', 'email', 'password')
+                $student = Students::select('id', 'name', 'email','course', 'password')
                 ->where('id', '=', $user)
                 ->first();
 
@@ -195,7 +272,7 @@ class StudentsController extends Controller
                     return view('option', compact('success', 'student'));
                 }else{
                     $error = 'パスワードが正しくありません';
-                    return view('option', compact('error'));
+                    return view('option', compact('error', 'student'));
                 }
             }
         }else{
@@ -206,9 +283,10 @@ class StudentsController extends Controller
     }
 
     public function ses_del (Request $request) {
-        // $request->session()->forget('user');
+        $request->session()->forget('user');
         $request->session()->flush();
-        header( "Location: https://learning.techis.jp" ) ;
-        exit ;
+        // session_start();
+        // session_destroy();
+        return $this->index();
     }
 }

@@ -51,7 +51,7 @@
                     <b>TECH I.S.では多くあるフレームワークの中で一番簡単なCodeIgniterを採用しました。</b>
                 </div>
                 <div class='explain'>
-                    <img src="{{ asset('storage/') }}/2-6-1_03.png">
+                    <img src="{{ asset('storage/') }}/2-6-1_04.png">
                 </div>
             </ul>
         </div> 

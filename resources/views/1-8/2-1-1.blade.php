@@ -7,11 +7,11 @@
                 <div class='work_block'>
                     <li class='sm_work'>
                     フォーム制作では、入力画面のフォームを作成します。
-                        <ul>
+                        <!-- <ul>
                             <li class='comment'>
                                 参考:<a href='https://gray-code.com/php/make-the-form-vol1/'>https://gray-code.com/php/make-the-form-vol1/</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li class='sm_work'>
                     覚えたHTMLとCSSを利用して作成してください。
@@ -37,14 +37,14 @@
                     <li class='sm_work'>
                     以下の画面の通りに入力画面のフォームを作成してください。
                     </li>
-                    <li class='sm_work'>
+                    <!-- <li class='sm_work'>
                     フォームに関するHTMLタグについては下記URLのリファレンスを参考に実装してください。
                         <ul>
                             <li class='comment'>
                                 URL:<a href='http://www.htmq.com/html/indexm.shtml#for'>HTMLタグリファレンス</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </div>
                 <div class='explain'>
                     <img src="{{ asset('storage/') }}/2-1-1.png">

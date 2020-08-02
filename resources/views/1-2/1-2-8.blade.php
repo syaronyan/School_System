@@ -7,11 +7,11 @@
                 <p class='sm_section'>じゃんけんプログラム <img src="{{ asset('storage/Required.png ') }}" width="40" height="20"></p>
                 <div class='work_block'>
                     <li class='sm_work'>
-                        URLのようにじゃんけんプログラムを作ってください。
+                        じゃんけんプログラムを作ってください。
                     </li>
-                    <li class='comment'>
+                    <!-- <li class='comment'>
                         参考URL:<a href='http://demo.tofusystem.work/janken/index.php'>http://demo.tofusystem.work/janken/index.php</a>
-                    </li>
+                    </li> -->
                 </div>
             </ul>
             <ul class='lg_works'>
@@ -20,9 +20,9 @@
                     <li class='sm_work'>
                         日付を入力するとその日が何曜日かを教えてくれるWEBアプリを作成してください。
                     </li>
-                    <li class='comment'>
+                    <!-- <li class='comment'>
                         参考URL:<a href='http://imai.ashitaha.com/~hikawadai/week1.php'>http://imai.ashitaha.com/~hikawadai/week1.php</a>
-                    </li>
+                    </li> -->
                 </div>
             </ul>
             <ul class='lg_works'>

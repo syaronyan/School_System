@@ -7,11 +7,11 @@
                 <div class='work_block'>
                     <li class='sm_work'>
                         ボタンを作成し、クリックすると小窓を出現させてください。 
-                        <ul>
+                        <!-- <ul>
                             <li class='comment'>
                                 例:<a href='http://amenti.usamimi.info/windowopen.html'>http://amenti.usamimi.info/windowopen.html</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                 </div>
             </ul>

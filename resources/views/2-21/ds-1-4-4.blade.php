@@ -1,7 +1,7 @@
 @extends('layout.header')
 @section('content')
 <div class='background_wrapper'>
-    <div class='section'><a class='back' href="/work/18">⬅︎</a>Pandas 04</div>
+    <div class='section'><a class='back' href="/work/18">⬅︎</a>Pandas Dtype:残差値、行名・列名変更、連結</div>
         <div class='ul-align-center'>
             <ul class='lg_work'>
                 <div class='work_block'>

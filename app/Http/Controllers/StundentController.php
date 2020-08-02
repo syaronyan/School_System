@@ -17,6 +17,12 @@ class StundentController extends Controller
         return view('signin');
     }
 
+    public function redirect()
+    {
+        header( "Location: https://learning.techis.jp" ) ;
+        exit ;
+    }
+
     //ログインしていたらTOP画面へ遷移
     public function Top(Request $request)
     {
@@ -47,7 +53,7 @@ class StundentController extends Controller
                 return view('PRO_science_work', compact('groups', 'student'));
             }
         }else{
-            return $this->index();
+            return $this->redirect();
         }
         
     }
@@ -110,12 +116,84 @@ class StundentController extends Controller
             if($student->course == 0){
                 return view('mypage', compact('progress_tasks_edit', 'student'));
             }elseif($student->course == 1){
+                $group_ids = [];
+                $group_names = [];
+                $group_imgs = [];
+                $parcents = [];
+                $progress_tasks_edit = [];
+                $student_id = $request->student_id;
+                
+                //サブクエリ
+                $sub = Progress::select('tasks_id', 'check_flag')
+                ->where('student_id', '=', ':student_id')
+                ->where('check_flag', '=', ':check_flag')
+                ->toSql();
+
+                //進捗管理のデータ取得
+                $progress_tasks = Tasks::select(DB::raw('group_id, group.img_link as group_img, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count, tasks.status'))
+                ->join('group', 'group.id', '=', 'tasks.group_id')
+                ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
+                ->groupBy('tasks.group_id')
+                ->setBindings([':student_id'=>$user, ':check_flag'=>'1'])
+                ->where('tasks.status', '=', 1)
+                ->get();
+
+                //上記データを編集
+                foreach ($progress_tasks as $progress_task){
+                    array_push($group_ids, $progress_task['group_id']);
+                    array_push($group_names, $progress_task['group_name']);
+                    array_push($group_imgs, $progress_task['group_img']);
+                    $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
+                    array_push($parcents, $parsent);
+
+                    $progress_tasks_edit['group_ids'] = $group_ids;
+                    $progress_tasks_edit['group_names'] = $group_names;
+                    $progress_tasks_edit['group_imgs'] = $group_imgs;
+                    $progress_tasks_edit['parcents'] = $parcents;
+                }
                 return view('data-science', compact('progress_tasks_edit', 'student'));
             }elseif($student->course == 2){
+                $group_ids = [];
+                $group_names = [];
+                $group_imgs = [];
+                $parcents = [];
+                $progress_tasks_edit = [];
+                $student_id = $request->student_id;
+                
+                //サブクエリ
+                $sub = Progress::select('tasks_id', 'check_flag')
+                ->where('student_id', '=', ':student_id')
+                ->where('check_flag', '=', ':check_flag')
+                ->toSql();
+
+                //進捗管理のデータ取得
+                $progress_tasks = Tasks::select(DB::raw('group_id, group.img_link as group_img, group.name as group_name, count(*) as tasks_count, count(progress.check_flag) as progress_count, tasks.status'))
+                ->join('group', 'group.id', '=', 'tasks.group_id')
+                ->leftJoin(DB::raw('('.$sub.') AS progress'), 'progress.tasks_id', '=', 'tasks.id')
+                ->groupBy('tasks.group_id')
+                ->setBindings([':student_id'=>$user, ':check_flag'=>'1'])
+                ->where('tasks.status', '=', 1)
+                ->get();
+
+                //上記データを編集
+                foreach ($progress_tasks as $progress_task){
+                    array_push($group_ids, $progress_task['group_id']);
+                    array_push($group_names, $progress_task['group_name']);
+                    array_push($group_imgs, $progress_task['group_img']);
+                    $parsent = round(($progress_task['progress_count']/$progress_task['tasks_count'])*100);
+                    array_push($parcents, $parsent);
+
+                    $progress_tasks_edit['group_ids'] = $group_ids;
+                    $progress_tasks_edit['group_names'] = $group_names;
+                    $progress_tasks_edit['group_imgs'] = $group_imgs;
+                    $progress_tasks_edit['parcents'] = $parcents;
+                }
+
+
                 return view('PRO_science', compact('progress_tasks_edit', 'student'));
             }
         }else{
-            return $this->index();
+            return $this->redirect();
         }
     }
 
@@ -131,7 +209,7 @@ class StundentController extends Controller
             ->first();
             return view('option', compact('student'));
         }else{
-            return $this->index();
+            return $this->redirect();
         }
         
     }
@@ -147,10 +225,10 @@ class StundentController extends Controller
             if($student->course == 0){
             return view('document', compact('student'));
             }else{
-                return $this->index();
+                return $this->redirect();
             }
         }else{
-            return $this->index();
+            return $this->redirect();
         }
         
     }
@@ -161,7 +239,7 @@ class StundentController extends Controller
         if ($user == 1 || $user == 2 || $user == 3 || $user == 73 || $user == 87){
             return view('signup');
         }else{
-            return $this->index();
+            return $this->redirect();
         }
     }
 
