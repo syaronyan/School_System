@@ -22,6 +22,13 @@ class StudentsController extends Controller
     public function signup (Request $request) 
     {
         $user = $request->session()->get('user');
+        $student_name = $request['name'];
+        $student_email = $request['email'];
+        $student_pass = $request['password'];
+        $student_ent = $request['ent_date'];
+        $student_course = $request['course'];
+        $student_status = $request['status'];
+
         if (!empty($user)){
             $inputs = $request->all();
             //rules
@@ -48,8 +55,21 @@ class StudentsController extends Controller
             if($validation->fails()){
                 return redirect()->back()->withErrors($validation->errors())->withInput();
             }else{
-                Students::create($request->all());
-                return view('signup');
+                // Students::create($request->all());
+                $hash_pass = password_hash($student_pass, PASSWORD_DEFAULT);
+                
+                Students::insert([
+                    // 'id' => $student_id,
+                    'name' => $student_name,
+                    'email' => $student_email,
+                    'password' => $hash_pass,
+                    'ent_date' => $student_ent,
+                    'course' => $student_course,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                    'status' => $student_status,
+                    ]);
+                    return view('signup');
             }
         }else{
             return $this->index();
@@ -80,8 +100,8 @@ class StudentsController extends Controller
                 $auth = Students::where('email', '=', $email)->first();
         
                 //if fails
-        
-                if($pass == $auth['password']){
+                if(password_verify($pass, $auth['password'])){
+                // if($pass == $auth['password']){
                     return $this->ses_put($request, $auth->id);
                 }else{
                     $error = 'パスワードが正しくありません';
